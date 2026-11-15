@@ -1,7 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MessageSquare, MapPin, Building2 } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
+import { MessageSquare, MapPin, Building2, Copy, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { DEALS, matchesFor } from "@/lib/deals";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { DEALS, matchesFor, type Deal } from "@/lib/deals";
 import { TierBadge, StateBadge } from "@/components/hub/badges";
 import { cn } from "@/lib/utils";
 
@@ -17,6 +20,9 @@ export const Route = createFileRoute("/deals")({
 });
 
 function Deals() {
+  const [selected, setSelected] = useState<Deal | null>(null);
+  const [message, setMessage] = useState("");
+  const [sent, setSent] = useState<string[]>([]);
   return (
     <div className="space-y-6">
       <div>
@@ -34,7 +40,7 @@ function Deals() {
                   <p className="mt-2 text-base font-medium text-foreground">{d.stage}</p>
                   <dl className="mt-4 grid grid-cols-2 gap-x-8 gap-y-3 text-sm"><div><dt className="text-muted-foreground">Account executive</dt><dd className="font-semibold text-foreground">{d.ae}</dd></div><div><dt className="text-muted-foreground">Region</dt><dd className="text-foreground">{d.region}</dd></div><div><dt className="text-muted-foreground">Close date</dt><dd className="text-foreground">{d.close}</dd></div><div><dt className="text-muted-foreground">Opportunity</dt><dd className="text-foreground">{d.id}</dd></div></dl>
                 </div>
-                <div className="space-y-4"><p className="text-3xl font-bold text-primary">${d.arr.toLocaleString()} ARR</p><Button disabled title="AE Slack details and a Slack connection are required"><MessageSquare className="h-4 w-4" />Ping AE on Slack</Button><p className="text-xs text-muted-foreground">Slack not connected</p></div>
+                <div className="space-y-4"><p className="text-3xl font-bold text-primary">${d.arr.toLocaleString()} ARR</p><Button onClick={() => { setSelected(d); setMessage(`Hi ${d.ae}, would you be open to bringing a partner into the ${d.account} opportunity (${d.stage}, $${d.arr.toLocaleString()} ARR), or introducing a partner to the prospect? Please let me know if you are willing to discuss.`); }}><MessageSquare className="h-4 w-4" />Ping AE on Slack</Button><p className="text-xs text-muted-foreground">{sent.includes(d.id) ? "Demo ping recorded · No Slack message sent" : "Demo only · No Slack message will be sent"}</p></div>
               </div>
               <div className="mt-4 space-y-2">
                 <h2 className="text-xs font-semibold uppercase text-muted-foreground">Recommended partners</h2>
@@ -63,6 +69,13 @@ function Deals() {
           );
         })}
       </div>
+      <Dialog open={selected !== null} onOpenChange={(open) => { if (!open) setSelected(null); }}>
+        <DialogContent>
+          <DialogHeader><DialogTitle>Ping {selected?.ae} on Slack</DialogTitle><DialogDescription>Demo only. No Slack message will be sent.</DialogDescription></DialogHeader>
+          <label className="text-sm font-medium text-foreground">Message<textarea aria-label="Slack message" value={message} onChange={(e) => setMessage(e.target.value)} className="mt-2 min-h-40 w-full rounded-md border bg-background p-3 text-sm text-foreground" /></label>
+          <div className="flex flex-wrap justify-end gap-2"><Button variant="outline" onClick={async () => { try { await navigator.clipboard.writeText(message); toast.success("Message copied"); } catch { toast.error("Could not copy the message"); } }}><Copy className="h-4 w-4" />Copy Message</Button><Button disabled={!message.trim()} onClick={() => { if (!selected) return; setSent((prev) => [...prev, selected.id]); setSelected(null); toast.success("Demo ping recorded", { description: "No Slack message was sent." }); }}><Send className="h-4 w-4" />Simulate Slack Ping</Button></div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
