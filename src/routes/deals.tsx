@@ -1,12 +1,15 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { toast } from "sonner";
-import { MessageSquare, MapPin, Building2, Copy, Send } from "lucide-react";
+import { MessageSquare, MapPin, Building2, Copy, Send, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { DEALS, matchesFor, type Deal } from "@/lib/deals";
 import { TierBadge, StateBadge } from "@/components/hub/badges";
 import { cn } from "@/lib/utils";
+import { PartnerEmailDialog } from "@/components/hub/PartnerEmailDialog";
+import type { Partner } from "@/lib/partners";
+import { regionForDealTerritory } from "@/lib/regions";
 
 export const Route = createFileRoute("/deals")({
   head: () => ({ meta: [
@@ -23,6 +26,7 @@ function Deals() {
   const [selected, setSelected] = useState<Deal | null>(null);
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState<string[]>([]);
+  const [email, setEmail] = useState<{ deal: Deal; partner: Partner } | null>(null);
   return (
     <div className="space-y-6">
       <div>
@@ -38,7 +42,7 @@ function Deals() {
                 <div>
                   <p className="text-2xl font-bold text-foreground">{d.account}</p>
                   <p className="mt-2 text-base font-medium text-foreground">{d.stage}</p>
-                  <dl className="mt-4 grid grid-cols-2 gap-x-8 gap-y-3 text-sm"><div><dt className="text-muted-foreground">Account executive</dt><dd className="font-semibold text-foreground">{d.ae}</dd></div><div><dt className="text-muted-foreground">Region</dt><dd className="text-foreground">{d.region}</dd></div><div><dt className="text-muted-foreground">Close date</dt><dd className="text-foreground">{d.close}</dd></div><div><dt className="text-muted-foreground">Opportunity</dt><dd className="text-foreground">{d.id}</dd></div></dl>
+                  <dl className="mt-4 grid grid-cols-2 gap-x-8 gap-y-3 text-sm"><div><dt className="text-muted-foreground">Account executive</dt><dd className="font-semibold text-foreground">{d.ae}</dd></div><div><dt className="text-muted-foreground">Region</dt><dd className="text-foreground">{regionForDealTerritory(d.region) ?? "—"}</dd></div><div><dt className="text-muted-foreground">Close date</dt><dd className="text-foreground">{d.close}</dd></div><div><dt className="text-muted-foreground">Opportunity</dt><dd className="text-foreground">{d.id}</dd></div></dl>
                 </div>
                 <div className="space-y-4"><p className="text-3xl font-bold text-primary">${d.arr.toLocaleString()} ARR</p><Button onClick={() => { setSelected(d); setMessage(`Hi ${d.ae}, would you be open to bringing a partner into the ${d.account} opportunity (${d.stage}, $${d.arr.toLocaleString()} ARR), or introducing a partner to the prospect? Please let me know if you are willing to discuss.`); }}><MessageSquare className="h-4 w-4" />Ping AE on Slack</Button><p className="text-xs text-muted-foreground">{sent.includes(d.id) ? "Demo ping recorded · No Slack message sent" : "Demo only · No Slack message will be sent"}</p></div>
               </div>
@@ -59,7 +63,7 @@ function Deals() {
                         </div>
                       </div>
                       <div className="flex gap-2">
-                        <Button size="sm" variant="outline" asChild><Link to="/enablement" search={{ p: m.partner.id }}>Enablement</Link></Button>
+                        <Button size="sm" variant="outline" onClick={() => setEmail({ deal: d, partner: m.partner })}><Mail className="h-3.5 w-3.5" />Email Partner</Button>
                       </div>
                     </div>
                   );
@@ -69,6 +73,7 @@ function Deals() {
           );
         })}
       </div>
+      {email && <PartnerEmailDialog key={`${email.deal.id}:${email.partner.id}`} deal={email.deal} partner={email.partner} onClose={() => setEmail(null)} />}
       <Dialog open={selected !== null} onOpenChange={(open) => { if (!open) setSelected(null); }}>
         <DialogContent>
           <DialogHeader><DialogTitle>Ping {selected?.ae} on Slack</DialogTitle><DialogDescription>Demo only. No Slack message will be sent.</DialogDescription></DialogHeader>

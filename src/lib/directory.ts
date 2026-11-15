@@ -2,6 +2,7 @@ import raw from "@/data/ot-partners.json";
 import { PARTNERS, type PartnerContact } from "./partners";
 import type { Tier } from "./partners";
 import { PLANS, type PlanItem } from "./enablement";
+import { REGION_OPTIONS, regionForCountry } from "./regions";
 
 export interface DirPartner {
   id: string; name: string; country: string; region: string; tier: Tier; type: string;
@@ -19,7 +20,7 @@ const clean = (s: string) => s.replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").re
 export const DIRECTORY: DirPartner[] = (raw as Raw[]).map((r) => {
   const m = mom.get(r.id);
   return {
-    id: r.id, name: r.name, country: m?.country ?? r.country, region: m?.region ?? r.region,
+    id: r.id, name: r.name, country: m?.country ?? r.country, region: regionForCountry(m?.country ?? r.country) ?? "",
     tier: m?.tier ?? r.tier as Tier, type: m?.type ?? r.type, segmentFocus: r.segmentFocus,
     verticals: m?.verticals ?? Array.from(new Set(r.productFocus.split(",").map((v) => v.trim().replace(" and ", " & ")).filter(Boolean))),
     certifications: m?.certifications ?? r.certifications, opportunities: m?.opportunities ?? r.opportunities, closedWon: m?.closedWon ?? r.closedWon,
@@ -31,7 +32,7 @@ export const DIRECTORY: DirPartner[] = (raw as Raw[]).map((r) => {
 });
 
 const uniq = (xs: string[]) => Array.from(new Set(xs)).sort();
-export const REGIONS = uniq(DIRECTORY.map((p) => p.region));
+export const REGIONS = REGION_OPTIONS;
 export const TYPES = uniq(DIRECTORY.map((p) => p.type));
 export const TIERS: Tier[] = ["Platinum", "Gold", "Silver", "Bronze"];
 

@@ -1,5 +1,6 @@
 import momentum from "@/data/ot-momentum.json";
 import master from "@/data/ot-partners.json";
+import { regionForCountry } from "./regions";
 
 const masterById = new Map(master.map((r) => [r.id, r]));
 const masterByName = new Map(master.map((r) => [r.name.toLowerCase(), r]));
@@ -34,7 +35,7 @@ export const PARTNERS: Partner[] = momentum.map((m) => {
   const r = masterById.get(m.id) ?? masterByName.get(m.name.toLowerCase());
   const contacts = { ceo: cleanContact(m.contacts.ceo), partnerContact: cleanContact(m.contacts.partnerContact), partnerManager: cleanContact(m.contacts.partnerManager) };
   return {
-     ...m, tier: m.tier as Tier,
+     ...m, tier: m.tier as Tier, region: regionForCountry(m.country) ?? "",
      daysSinceLastActivity: activityAge(m.lastActiveUpdate),
      activationState: activityState(activityAge(m.lastActiveUpdate), m.dealsRegistered, m.activationState === "Newly Signed (0-30d)"),
     contacts, contact: contacts.partnerContact, partnerManager: contacts.partnerManager.name,

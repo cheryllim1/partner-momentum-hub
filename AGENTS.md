@@ -32,3 +32,4 @@ use the editor.
 - Normalize uploaded momentum records in the partner library and merge directory profiles by ID; this keeps pipeline and profile figures consistent.
 - Reuse the shared PartnerDetail view for dedicated partner routes and legacy enablement selections; this preserves old links without duplicating incentive or checklist behavior.
 - Parse explicit relative activity ages from uploaded last-update descriptions in the partner library; never substitute last-deal or signing age for latest activity.
+- Centralize country-to-region assignments in the region library for pipeline, directory and matching; leave unspecified assignments unresolved rather than guessing.

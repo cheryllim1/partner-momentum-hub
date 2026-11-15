@@ -6,6 +6,7 @@ import { PARTNERS, computeKpis, partnerTiming, type ActivationState, type Tier }
 import { TierBadge, StateBadge } from "@/components/hub/badges";
 import { usePersisted } from "@/lib/demo-store";
 import { cn } from "@/lib/utils";
+import { REGION_OPTIONS } from "@/lib/regions";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -55,7 +56,7 @@ function Pipeline() {
       </div>
 
       <div className="flex flex-wrap gap-4 border-y py-4">
-        {[{ label: "Region", value: region, set: setRegion, options: optionsFor("region") }, { label: "Country", value: country, set: setCountry, options: optionsFor("country") }, { label: "Partner tier", value: tier === "All" ? "" : tier, set: (v: string) => setTier((v || "All") as Tier | "All"), options: TIERS.filter((v) => v !== "All") }, { label: "Partner type", value: type, set: setType, options: optionsFor("type") }].map((f) => <label key={f.label} className="min-w-40 flex-1 text-xs font-semibold text-muted-foreground">{f.label}<select aria-label={f.label} value={f.value} onChange={(e) => f.set(e.target.value)} className="mt-2 w-full rounded-md border bg-background px-3 py-2 text-sm text-foreground"><option value="">All</option>{f.options.map((v) => <option key={v}>{v}</option>)}</select></label>)}
+        {[{ label: "Region", value: region, set: setRegion, options: REGION_OPTIONS }, { label: "Country", value: country, set: setCountry, options: optionsFor("country") }, { label: "Partner tier", value: tier === "All" ? "" : tier, set: (v: string) => setTier((v || "All") as Tier | "All"), options: TIERS.filter((v) => v !== "All") }, { label: "Partner type", value: type, set: setType, options: optionsFor("type") }].map((f) => <label key={f.label} className="min-w-40 flex-1 text-xs font-semibold text-muted-foreground">{f.label}<select aria-label={f.label} value={f.value} onChange={(e) => f.set(e.target.value)} className="mt-2 w-full rounded-md border bg-background px-3 py-2 text-sm text-foreground"><option value="">All</option>{f.options.map((v) => <option key={v}>{v}</option>)}</select></label>)}
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -74,29 +75,30 @@ function Pipeline() {
       </div>
 
       <div className="overflow-x-auto rounded-xl border bg-card shadow-card">
-        <table className="w-full text-sm">
+        <table className="w-full table-fixed text-xs">
+          <colgroup>{["16%", "6%", "8%", "8%", "7%", "4%", "18%", "14%", "10%", "9%"].map((width, i) => <col key={i} style={{ width }} />)}</colgroup>
           <thead className="border-b bg-muted/50 text-left text-xs uppercase tracking-wide text-muted-foreground">
-            <tr>{["Partner", "Region", "Country", "Partner Type", "Tier", "Deals", "Opportunities & Stages", "Activity & Timing", "Status", ""].map((h, i) => <th key={i} className="px-4 py-3">{h}</th>)}</tr>
+            <tr>{["Partner", "Region", "Country", "Partner Type", "Tier", "Deals", "Opportunities & Stages", "Activity & Timing", "Status", ""].map((h, i) => <th key={i} className="px-2 py-3 break-words">{h}</th>)}</tr>
           </thead>
           <tbody className="divide-y">
             {rows.map((p) => (
               <tr key={p.id} className="hover:bg-muted/30">
-                <td className="px-4 py-3"><Link to="/partners/$partnerId" params={{ partnerId: p.id }} className="font-semibold text-primary hover:underline">{p.name}</Link></td>
-                <td className="px-4 py-3 text-muted-foreground">{p.region}</td>
-                <td className="px-4 py-3 text-muted-foreground">{p.country}</td>
-                <td className="px-4 py-3 text-muted-foreground">{p.type}</td>
-                <td className="px-4 py-3"><TierBadge tier={p.tier} /></td>
-                <td className="px-4 py-3 text-center font-bold">{p.dealsRegistered}</td>
-                <td className="min-w-60 px-4 py-3">
+                <td className="px-2 py-3 break-words"><Link to="/partners/$partnerId" params={{ partnerId: p.id }} className="font-semibold text-primary hover:underline">{p.name}</Link></td>
+                <td className="px-2 py-3 break-words text-muted-foreground">{p.region}</td>
+                <td className="px-2 py-3 break-words text-muted-foreground">{p.country}</td>
+                <td className="px-2 py-3 break-words text-muted-foreground">{p.type}</td>
+                <td className="px-2 py-3 break-words"><TierBadge tier={p.tier} /></td>
+                <td className="px-1 py-3 text-center font-bold">{p.dealsRegistered}</td>
+                <td className="px-2 py-3">
                   <p className="mb-1 text-xs font-semibold">{p.opportunities} total · {p.opportunityStages.discovery + p.opportunityStages.solution + p.opportunityStages.proposal + p.opportunityStages.negotiation} open</p>
                   <div className="flex flex-wrap gap-1">{Object.entries(p.opportunityStages).map(([stage, n]) => <span key={stage} className="rounded border bg-muted/40 px-1.5 py-0.5 text-xs text-muted-foreground">{stage === "closedWon" ? "Won" : stage.charAt(0).toUpperCase() + stage.slice(1)} {n}</span>)}</div>
                 </td>
-                <td className="min-w-48 px-4 py-3 text-xs">
+                <td className="px-2 py-3 text-xs">
                   {partnerTiming(p) && <p className="font-medium text-foreground">{partnerTiming(p)}</p>}
                   <p className="mt-1 text-muted-foreground">{p.lastActiveUpdate}</p>
                 </td>
-                <td className="px-4 py-3"><StateBadge state={p.activationState} /></td>
-                <td className="px-4 py-3"><Button size="sm" variant="outline" asChild><Link to="/partners/$partnerId" params={{ partnerId: p.id }}>View Profile</Link></Button></td>
+                <td className="px-2 py-3 break-words"><StateBadge state={p.activationState} /></td>
+                <td className="px-2 py-3 break-words"><Button size="sm" variant="outline" className="h-auto whitespace-normal px-2 py-1 text-xs" asChild><Link to="/partners/$partnerId" params={{ partnerId: p.id }}>View Profile</Link></Button></td>
               </tr>
             ))}
             {rows.length === 0 && <tr><td colSpan={10} className="px-4 py-10 text-center text-muted-foreground">No partners match these filters.</td></tr>}

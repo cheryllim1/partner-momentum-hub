@@ -1,4 +1,5 @@
 import { PARTNERS, overlapAccounts, type Partner } from "./partners";
+import { regionForDealTerritory } from "./regions";
 export interface Deal { id: string; account: string; arr: number; stage: string; ae: string; close: string; region: string }
 export const DEALS: Deal[] = [
   { id: "OPP-9001", account: "Volvo Cars", arr: 120000, stage: "Stage 3 – Solution", ae: "Emma Berg", close: "2027-01-30", region: "Nordics" },
@@ -10,9 +11,11 @@ export const DEALS: Deal[] = [
 ];
 /** Rank non-activated partners for a deal: account overlap (60), region (30), overlap breadth (10). */
 export function matchesFor(d: Deal, ps: Partner[] = PARTNERS) {
+  const region = regionForDealTerritory(d.region);
   return ps.filter((p) => p.dealsRegistered === 0).map((p) => {
     const hasAccount = overlapAccounts(p).includes(d.account);
-    const score = (hasAccount ? 60 : 0) + (p.region === d.region ? 30 : 0) + Math.min(10, p.accountOverlapCount);
-    return { partner: p, score, hasAccount, sameRegion: p.region === d.region };
+    const sameRegion = region !== null && p.region === region;
+    const score = (hasAccount ? 60 : 0) + (sameRegion ? 30 : 0) + Math.min(10, p.accountOverlapCount);
+    return { partner: p, score, hasAccount, sameRegion };
   }).filter((m) => m.score >= 30).sort((a, b) => b.score - a.score).slice(0, 5);
 }
