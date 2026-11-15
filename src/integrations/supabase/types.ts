@@ -14,7 +14,90 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      partner_followups: {
+        Row: {
+          action: string
+          created_at: string
+          created_by: string
+          due_date: string
+          id: string
+          notes: string
+          owner_name: string
+          partner_id: string
+          status: string
+          updated_at: string
+          updated_by: string
+        }
+        Insert: {
+          action: string
+          created_at?: string
+          created_by?: string
+          due_date: string
+          id?: string
+          notes?: string
+          owner_name: string
+          partner_id: string
+          status?: string
+          updated_at?: string
+          updated_by?: string
+        }
+        Update: {
+          action?: string
+          created_at?: string
+          created_by?: string
+          due_date?: string
+          id?: string
+          notes?: string
+          owner_name?: string
+          partner_id?: string
+          status?: string
+          updated_at?: string
+          updated_by?: string
+        }
+        Relationships: []
+      }
+      partner_interactions: {
+        Row: {
+          channel: string
+          created_at: string
+          created_by: string
+          id: string
+          next_steps: string
+          occurred_on: string
+          outcome: string
+          participants: string
+          partner_id: string
+          recorded_by: string
+          summary: string
+        }
+        Insert: {
+          channel: string
+          created_at?: string
+          created_by?: string
+          id?: string
+          next_steps?: string
+          occurred_on: string
+          outcome: string
+          participants: string
+          partner_id: string
+          recorded_by: string
+          summary: string
+        }
+        Update: {
+          channel?: string
+          created_at?: string
+          created_by?: string
+          id?: string
+          next_steps?: string
+          occurred_on?: string
+          outcome?: string
+          participants?: string
+          partner_id?: string
+          recorded_by?: string
+          summary?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
