@@ -13,6 +13,7 @@ import { toggleCompletion } from "@/lib/onboarding";
 import { BronzeOnboarding } from "./BronzeOnboarding";
 import { ResourceDraftDialog } from "./ResourceDraftDialog";
 import { PartnerWork } from "./PartnerWork";
+import { CoSellTracker } from "./CoSellTracker";
 const money = (n: number) => `$${n.toLocaleString("en-US")}`;
 const sel = "rounded-md border bg-background px-3 py-2 text-sm text-foreground";
 function Stat({ label, value }: { label: string; value: React.ReactNode }) {
@@ -76,6 +77,8 @@ export function PartnerDetail({ partner }: { partner: DirPartner }) {
       {partner.tier === "Bronze" && <BronzeOnboarding days={activity?.daysSinceSigned ?? null} deals={sims.includes(partner.id) ? Math.max(1, activity?.dealsRegistered ?? 0) : activity?.dealsRegistered ?? 0} done={milestones[partner.id] ?? []} onChange={(items) => setMilestones((prev) => ({ ...prev, [partner.id]: items }))} onResource={setResource} />}
 
       <PartnerWork key={partner.id} partner={partner} />
+
+      <CoSellTracker key={`co-sell:${partner.id}`} partnerId={partner.id} partnerName={partner.name} accounts={accounts.pipelineAccounts} />
 
       <AccountSection title="Current Customers" accounts={accounts.currentCustomers} />
       <AccountSection title="Pipeline Co-Sell Accounts" accounts={accounts.pipelineAccounts} />

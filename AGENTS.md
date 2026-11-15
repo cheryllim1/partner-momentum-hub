@@ -39,3 +39,4 @@ use the editor.
 - Centralize Bronze onboarding deadlines and prioritization in the onboarding library; only uploaded deal registrations or explicit manager confirmations count as milestones, never resource drafts.
 - Store demo onboarding confirmations, enablement completion and supplied resource links in browser persistence shared by profile and pipeline; this keeps reloads consistent without claiming team-wide synchronization or sent messages.
 - Store shared follow-ups and append-only interaction logs in Cloud, accessed through workspace-identity-verified server functions and project-scoped RLS; this enables collaboration without anonymous access or mixing demo completion with real outreach.
+- Keep partner co-sell demo confirmations and simulated ping timestamps in partner/account-scoped browser persistence; only manual confirmation changes milestones, and demo pings never send messages or change uploaded sales stages.

@@ -1,4 +1,5 @@
 # Roadmap
+- [x] Add per-account demo co-sell milestones and Slack ping previews on partner pages; verified manual confirmations, reversal, reload persistence and phone layout
 - [x] Add shared partner follow-ups with owners, due dates, editing, completion and overdue filters
 - [x] Add dated partner interaction history with outcomes and agreed next steps
 - [ ] Verify signed-in shared records end-to-end — local browser has no Lovable workspace identity; signed-out protections and test-service flows passed
