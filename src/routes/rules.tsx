@@ -29,7 +29,7 @@ function Rules() {
   const [tierIdx, setTierIdx] = useState(2);
   const [deal, setDeal] = useState(40000);
   const tier = TIERS[tierIdx] ?? "Gold";
-  const incentives = incentivesFor(tier, deal, on[3]);
+  const incentives = incentivesFor(tier, deal, on[3] ?? false);
   return (
     <div className="space-y-6">
       <div>
@@ -42,7 +42,7 @@ function Rules() {
             <div key={r.id} className={cn("rounded-xl border bg-card p-5 shadow-card transition-opacity", !on[r.id] && "opacity-50")}>
               <div className="mb-3 flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wide text-primary">Rule {r.id} · {r.note}</span>
-                <div className="flex items-center gap-2 text-xs text-muted-foreground">{on[r.id] ? "Enabled" : "Disabled"}<Switch checked={on[r.id]} onCheckedChange={(v) => setOn((s) => ({ ...s, [r.id]: v }))} /></div>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">{on[r.id] ? "Enabled" : "Disabled"}<Switch checked={on[r.id] ?? false} onCheckedChange={(v) => setOn((s) => ({ ...s, [r.id]: v }))} /></div>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <div className="flex flex-1 items-center gap-3 rounded-lg border bg-background p-3"><r.icon className="h-5 w-5 shrink-0 text-primary" /><div><p className="text-[10px] font-semibold uppercase text-muted-foreground">When</p><p className="text-sm font-semibold text-foreground">{r.trigger}</p></div></div>
