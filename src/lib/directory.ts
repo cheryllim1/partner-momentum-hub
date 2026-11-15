@@ -43,6 +43,7 @@ export function filterPartners(ps: DirPartner[], f: Filters) {
 export function planFor(t: Tier) { return PLANS[t === "Platinum" ? "1:1" : t === "Gold" ? "1:Few" : "1:Many"]; }
 /** Example completion state derived from the partner's closed-won and certification counts. */
 export function seedDoneDir(p: DirPartner): Set<string> {
+  if (p.tier === "Bronze") return new Set(); // Bronze = newly signed, blank slate
   const items: PlanItem[] = planFor(p.tier).items;
   const ratio = Math.min(0.9, 0.1 + p.closedWon * 0.04 + p.certifications * 0.08);
   return new Set(items.slice(0, Math.round(items.length * ratio)).map((i) => i.id));

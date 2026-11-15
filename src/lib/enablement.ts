@@ -79,6 +79,7 @@ export function planKey(p: Partner): keyof typeof PLANS {
 export function tierPlan(t: Tier) { return t === "Platinum" ? "1:1" : t === "Gold" ? "1:Few" : "1:Many"; }
 /** Demo completion state seeded from partner signals. */
 export function seedDone(p: Partner): Set<string> {
+  if (p.tier === "Bronze") return new Set(); // Bronze = newly signed, blank slate
   const items = PLANS[planKey(p)].items;
   const ratio = p.dealsRegistered > 0 ? 0.75 : p.portalLoggedIn && p.salesKitDownloaded ? 0.45 : p.portalLoggedIn ? 0.25 : 0.1;
   return new Set(items.slice(0, Math.round(items.length * ratio)).filter((_, i) => i % 4 !== 3 || p.dealsRegistered > 0).map((i) => i.id));
