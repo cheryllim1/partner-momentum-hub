@@ -1,4 +1,7 @@
 # Roadmap
+- [ ] Add shared partner follow-ups with owners, due dates, editing, completion and overdue filters
+- [ ] Add dated partner interaction history with outcomes and agreed next steps
+- [ ] Verify shared records and workspace identity access
 - [x] Add Bronze 30/60/90-day onboarding with manager-confirmed milestones and urgency filtering
 - [x] Add editable resource drafts and persistent completion tracking without treating outreach as completion
 - [ ] Verify signed-in AI answer end-to-end — feature implemented with permitted zero-retention model; local browser has no Lovable identity
