@@ -17,7 +17,23 @@ export function AppHeader() {
         <div className="flex items-center gap-3 py-4">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground"><Rocket className="h-5 w-5" /></div>
           <div>
-            <p className="text-base font-bold leading-tight text-foreground">Partner Activation and Enablement Dashboard</p>
+            <p className="text-base font-bold leading-tight text-foreground">Partner Momentum Hub</p>
+            <p className="text-xs text-muted-foreground">
+              Built by{" "}
+              <a
+                href="https://www.linkedin.com/in/cheryl-ai-tian-lim/"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="font-medium text-primary hover:underline"
+              >Cheryl Lim</a>
+              {" · "}
+              <a
+                href="https://github.com/cheryllim1/partner-momentum-hub"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="font-medium text-primary hover:underline"
+              >GitHub</a>
+            </p>
           </div>
           <div className="ml-auto flex shrink-0 flex-wrap gap-2"><PartnerInsights /><Button variant="ghost" size="sm" onClick={resetDemo} className="text-xs text-muted-foreground"><RotateCcw className="h-3.5 w-3.5" />Reset Demo</Button></div>
         </div>
