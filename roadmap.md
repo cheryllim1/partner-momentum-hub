@@ -1,4 +1,9 @@
 # Roadmap
+- [ ] Rename pipeline, add country columns and region/country/tier/type filters that update KPI rates
+- [ ] Replace risk KPI and statuses with inactivity-based dormant/disengaged rules — awaiting activity definition
+- [ ] Emphasize deal details, cap recommendations at five, and replace intro action with Ping AE on Slack
+- [ ] Remove standalone rules page, preserving individual partner incentives
+- [ ] Add current-customer section matching closed-won totals — awaiting customer records and count definition
 - [x] Import corrected partner momentum upload and simplify pipeline with opportunities, stages and tier-specific timing
 - [x] Dedicated partner profiles with uploaded contacts and performance, enablement and incentive overrides
 - [ ] Deal page changes — waiting for user's deal dataset
