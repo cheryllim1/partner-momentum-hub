@@ -19,8 +19,19 @@ describe("country-based partner regions", () => {
   it("assigns DACH by country", () => {
     for (const c of ["Germany", "Austria", "Switzerland"]) expect(regionForCountry(c)).toBe("DACH");
   });
-  it("leaves unspecified European assignments unresolved", () => {
-    expect(regionForCountry("Belgium")).toBeNull();
-    expect(regionForCountry("Ukraine")).toBeNull();
+  it("assigns Benelux to EMEA N", () => {
+    for (const c of ["Belgium", "Netherlands", "Luxembourg"]) expect(regionForCountry(c)).toBe("EMEA N");
+  });
+  it("assigns uploaded Eastern Europe countries to EMEA N", () => {
+    for (const c of ["Albania", "Bosnia and Herzegovina", "Bulgaria", "Czech Republic", "Estonia", "Hungary", "Latvia", "Poland", "Romania", "Slovenia", "Ukraine"]) expect(regionForCountry(c)).toBe("EMEA N");
+  });
+  it("assigns Cyprus to EMEA N", () => {
+    expect(regionForCountry("Cyprus")).toBe("EMEA N");
+  });
+  it("assigns Azerbaijan and Russia to EMEA S", () => {
+    for (const c of ["Azerbaijan", "Russian Federation", "Russia"]) expect(regionForCountry(c)).toBe("EMEA S");
+  });
+  it("keeps unknown countries unresolved", () => {
+    expect(regionForCountry("Unknown country")).toBeNull();
   });
 });
