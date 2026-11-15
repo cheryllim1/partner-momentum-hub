@@ -1,18 +1,20 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const PREFIX = "pah-demo:";
 
 /** State that survives page reloads (browser storage). Read after hydration to avoid SSR mismatch. */
 export function usePersisted<T>(key: string, initial: T) {
   const [v, setV] = useState<T>(initial);
-  const loaded = useRef(false);
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     try { const s = localStorage.getItem(PREFIX + key); if (s) setV(JSON.parse(s) as T); } catch { /* ignore */ }
-    loaded.current = true;
+    setLoaded(true);
   }, [key]);
   useEffect(() => {
-    if (loaded.current) localStorage.setItem(PREFIX + key, JSON.stringify(v));
-  }, [key, v]);
+    if (loaded) {
+      try { localStorage.setItem(PREFIX + key, JSON.stringify(v)); } catch { /* storage unavailable */ }
+    }
+  }, [key, v, loaded]);
   return [v, setV] as const;
 }
 

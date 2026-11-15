@@ -1,4 +1,6 @@
 # Roadmap
+- [x] Add Bronze 30/60/90-day onboarding with manager-confirmed milestones and urgency filtering
+- [x] Add editable resource drafts and persistent completion tracking without treating outreach as completion
 - [ ] Verify signed-in AI answer end-to-end — feature implemented with permitted zero-retention model; local browser has no Lovable identity
 - [x] Tighten pipeline geography columns and verify fit
 - [x] Replace recommended-partner enablement links with editable joint co-selling email drafts

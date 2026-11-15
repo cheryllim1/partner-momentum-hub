@@ -36,3 +36,5 @@ use the editor.
 - Keep AI questions behind verified Lovable workspace identity in server functions, sending a contact-free uploaded evidence projection through AI Gateway; missing activity or customers remain unknown.
 - Classify uploaded partner accounts centrally by status before display or AI projection; active deployments and pipeline prospects must stay separate while missing uploads remain unknown.
 - Persist explicitly requested simulated account-product assignments in source data with provenance, rather than rerandomizing during rendering, to keep demos stable and distinguish simulations from uploaded evidence.
+- Centralize Bronze onboarding deadlines and prioritization in the onboarding library; only uploaded deal registrations or explicit manager confirmations count as milestones, never resource drafts.
+- Store demo onboarding confirmations, enablement completion and supplied resource links in browser persistence shared by profile and pipeline; this keeps reloads consistent without claiming team-wide synchronization or sent messages.

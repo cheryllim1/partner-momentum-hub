@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { toast } from "sonner";
-import { Check, Send, Mail } from "lucide-react";
+import { Check, Send, Mail, Circle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { usePersisted } from "@/lib/demo-store";
@@ -9,6 +8,10 @@ import { planFor, seedDoneDir, defaultOverrides, incentivesWithOverrides, type D
 import { TierBadge } from "@/components/hub/badges";
 import { cn } from "@/lib/utils";
 import { separatePartnerAccounts, type PartnerAccount } from "@/lib/partner-accounts";
+import { PARTNERS } from "@/lib/partners";
+import { toggleCompletion } from "@/lib/onboarding";
+import { BronzeOnboarding } from "./BronzeOnboarding";
+import { ResourceDraftDialog } from "./ResourceDraftDialog";
 const money = (n: number) => `$${n.toLocaleString("en-US")}`;
 const sel = "rounded-md border bg-background px-3 py-2 text-sm text-foreground";
 function Stat({ label, value }: { label: string; value: React.ReactNode }) {
@@ -29,7 +32,13 @@ function Contact({ role, name, email }: { role: string; name?: string | null; em
 export function PartnerDetail({ partner }: { partner: DirPartner }) {
   const accounts = separatePartnerAccounts(partner.accounts);
   const plan = planFor(partner.tier);
-  const [done, setDone] = useState(() => seedDoneDir(partner));
+  const [completed, setCompleted] = usePersisted<string[]>(`enablement:${partner.id}`, [...seedDoneDir(partner)]);
+  const done = new Set(completed);
+  const [milestones, setMilestones] = usePersisted<Record<string, string[]>>("onboarding-milestones", {});
+  const [resources, setResources] = usePersisted<Record<string, string>>("resource-links", {});
+  const [resource, setResource] = useState<{ id: string; name: string } | null>(null);
+  const activity = PARTNERS.find((p) => p.id === partner.id);
+  const [sims] = usePersisted<string[]>("simulated-deals", []);
   const [o, setO] = usePersisted<Overrides>(`overrides:${partner.id}`, defaultOverrides(partner.tier));
   const upd = (patch: Partial<Overrides>) => setO((x) => ({ ...x, ...patch }));
   const doneCount = plan.items.filter((i) => done.has(i.id)).length;
@@ -62,6 +71,8 @@ export function PartnerDetail({ partner }: { partner: DirPartner }) {
           <div className="flex flex-wrap gap-2">{partner.verticals.map((v) => <span key={v} className="rounded-full border bg-background px-2.5 py-0.5 text-xs text-foreground">{v}</span>)}</div>
         </div>
       </div>
+
+      {partner.tier === "Bronze" && <BronzeOnboarding days={activity?.daysSinceSigned ?? null} deals={sims.includes(partner.id) ? Math.max(1, activity?.dealsRegistered ?? 0) : activity?.dealsRegistered ?? 0} done={milestones[partner.id] ?? []} onChange={(items) => setMilestones((prev) => ({ ...prev, [partner.id]: items }))} onResource={setResource} />}
 
       <AccountSection title="Current Customers" accounts={accounts.currentCustomers} />
       <AccountSection title="Pipeline Co-Sell Accounts" accounts={accounts.pipelineAccounts} />
@@ -102,7 +113,7 @@ export function PartnerDetail({ partner }: { partner: DirPartner }) {
 
       <div className="rounded-xl border bg-card p-5 shadow-card">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
-          <div><p className="text-sm font-bold text-foreground">{plan.label} Enablement Plan</p><p className="text-xs text-muted-foreground">{doneCount} completed · {plan.items.length - doneCount} not yet completed</p></div>
+           <div><p className="text-sm font-bold text-foreground">{plan.label} Enablement Plan</p><p className="text-xs text-muted-foreground">{doneCount} completed · {plan.items.length - doneCount} not yet completed</p><p className="mt-1 text-xs text-muted-foreground">{partner.tier === "Bronze" ? "Manager-confirmed completion" : "Demo baseline with manager updates"}</p></div>
           <div className="min-w-48">
             <div className="flex justify-between text-xs font-semibold"><span className="text-muted-foreground">Readiness</span><span className="text-foreground">{score}%</span></div>
             <div className="mt-1 h-2 rounded-full bg-muted"><div className="h-2 rounded-full bg-primary" style={{ width: `${score}%` }} /></div>
@@ -121,10 +132,10 @@ export function PartnerDetail({ partner }: { partner: DirPartner }) {
                     return (
                       <div key={i.id} className="flex flex-wrap items-center justify-between gap-2 border-b px-1 py-2">
                         <span className={cn("flex items-center gap-2 text-sm", ok ? "text-foreground" : "font-medium text-warning-foreground")}>
-                          <span className={cn("flex h-5 w-5 items-center justify-center rounded-full text-xs", ok ? "bg-success/15 text-success" : "bg-warning/20")}>{ok ? <Check className="h-3 w-3" /> : "!"}</span>{i.name}
+                          <Button size="icon" variant="ghost" className="h-7 w-7 shrink-0" aria-label={`${ok ? "Unmark" : "Complete"} ${i.name}`} aria-pressed={ok} onClick={() => setCompleted((prev) => toggleCompletion(prev, i.id))}>{ok ? <Check className="h-4 w-4 text-success" /> : <Circle className="h-4 w-4" />}</Button>{i.name}
                         </span>
                         {ok ? <span className="text-xs text-success">Done</span> : (
-                          <Button size="sm" variant="outline" onClick={() => { setDone((d) => new Set(d).add(i.id)); toast.success(`${i.action}: ${i.name}`, { description: `Sent to ${partner.name}` }); }}><Send className="mr-1 h-3 w-3" />{i.action}</Button>
+                          <Button size="sm" variant="outline" onClick={() => setResource(i)}><Send className="mr-1 h-3 w-3" />Push Resource</Button>
                         )}
                       </div>
                     );
@@ -135,6 +146,7 @@ export function PartnerDetail({ partner }: { partner: DirPartner }) {
           })}
         </div>
       </div>
+      {resource && <ResourceDraftDialog key={resource.id} partner={partner} item={resource} url={resources[resource.id] ?? ""} onSaveLink={(url) => setResources((prev) => ({ ...prev, [resource.id]: url }))} onClose={() => setResource(null)} />}
     </div>
   );
 }

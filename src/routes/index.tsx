@@ -7,6 +7,7 @@ import { TierBadge, StateBadge } from "@/components/hub/badges";
 import { usePersisted } from "@/lib/demo-store";
 import { cn } from "@/lib/utils";
 import { REGION_OPTIONS } from "@/lib/regions";
+import { bronzePriority, onboardingPace } from "@/lib/onboarding";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -36,7 +37,12 @@ function Pipeline() {
   const [region, setRegion] = useState("");
   const [country, setCountry] = useState("");
   const [type, setType] = useState("");
-  const rows = useMemo(() => partners.filter((p) => (state === "All" || p.activationState === state) && (tier === "All" || p.tier === tier) && (!region || p.region === region) && (!country || p.country === country) && (!type || p.type === type)), [partners, state, tier, region, country, type]);
+  const [bronzeOnly, setBronzeOnly] = useState(false);
+  const [milestones] = usePersisted<Record<string, string[]>>("onboarding-milestones", {});
+  const rows = useMemo(() => {
+    const filtered = partners.filter((p) => (state === "All" || p.activationState === state) && (tier === "All" || p.tier === tier) && (!region || p.region === region) && (!country || p.country === country) && (!type || p.type === type));
+    return bronzeOnly ? bronzePriority(filtered, milestones) : filtered;
+  }, [partners, state, tier, region, country, type, bronzeOnly, milestones]);
   const k = computeKpis(rows);
 
   const kpis = [
@@ -70,6 +76,7 @@ function Pipeline() {
       </div>
 
       <div className="flex flex-wrap gap-6 rounded-xl border bg-card p-4 shadow-card">
+        <Button size="sm" variant={bronzeOnly ? "default" : "outline"} aria-pressed={bronzeOnly} onClick={() => setBronzeOnly((prev) => !prev)}>Bronze Onboarding · First 90 Days</Button>
         <FilterGroup label="Activation State" options={STATES.map((s) => ({ label: s.label, value: s.value }))} value={state} onChange={(v) => setState(v as never)} />
         <span className="self-center text-xs text-muted-foreground">{rows.length} partners</span>
       </div>
@@ -96,6 +103,7 @@ function Pipeline() {
                 <td className="px-2 py-3 text-xs">
                   {partnerTiming(p) && <p className="font-medium text-foreground">{partnerTiming(p)}</p>}
                   <p className="mt-1 text-muted-foreground">{p.lastActiveUpdate}</p>
+                  {bronzeOnly && <p className="mt-1 font-medium text-primary">{onboardingPace(p.daysSinceSigned, milestones[p.id] ?? [], p.dealsRegistered)}</p>}
                 </td>
                 <td className="px-2 py-3 break-words"><StateBadge state={p.activationState} compact /></td>
               </tr>
