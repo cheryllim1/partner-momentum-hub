@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Normalize uploaded momentum records in the partner library and merge directory profiles by ID; this keeps pipeline and profile figures consistent.
+- Reuse the shared PartnerDetail view for dedicated partner routes and legacy enablement selections; this preserves old links without duplicating incentive or checklist behavior.

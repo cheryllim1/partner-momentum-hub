@@ -1,5 +1,5 @@
 import raw from "@/data/ot-partners.json";
-import momentum from "@/data/ot-momentum.json";
+import { PARTNERS, type PartnerContact } from "./partners";
 import type { Tier } from "./partners";
 import { PLANS, type PlanItem } from "./enablement";
 
@@ -7,21 +7,24 @@ export interface DirPartner {
   id: string; name: string; country: string; region: string; tier: Tier; type: string;
   segmentFocus: string; verticals: string[]; certifications: number; opportunities: number;
   closedWon: number; winRate: number; avgDealSize: number;
-  contact: { name: string; role: string; email: string }; overview: string;
+  contact: PartnerContact; overview: string;
+  contacts: { ceo: PartnerContact; partnerContact: PartnerContact; partnerManager: PartnerContact } | undefined;
+  implementationsDone: number | null; partnerManagerEmail: string | null;
   partnerManager: string | null; activationState: string | null;
 }
 type Raw = (typeof raw)[number];
-const mom = new Map(momentum.map((m) => [m.id, m]));
+const mom = new Map(PARTNERS.map((m) => [m.id, m]));
 const clean = (s: string) => s.replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/<[^>]+>/g, "").trim();
 
 export const DIRECTORY: DirPartner[] = (raw as Raw[]).map((r) => {
   const m = mom.get(r.id);
   return {
-    id: r.id, name: r.name, country: r.country || "—", region: r.region || "Unspecified",
-    tier: r.tier as Tier, type: r.type, segmentFocus: r.segmentFocus,
-    verticals: Array.from(new Set(r.productFocus.split(",").map((v) => v.trim().replace(" and ", " & ")).filter(Boolean))),
-    certifications: r.certifications, opportunities: r.opportunities, closedWon: r.closedWon,
-    winRate: r.winRate, avgDealSize: r.avgDealSize, contact: m?.partnerContact ?? r.partnerContact, overview: clean(r.overview ?? ""),
+    id: r.id, name: r.name, country: m?.country ?? r.country, region: m?.region ?? r.region,
+    tier: m?.tier ?? r.tier as Tier, type: m?.type ?? r.type, segmentFocus: r.segmentFocus,
+    verticals: m?.verticals ?? Array.from(new Set(r.productFocus.split(",").map((v) => v.trim().replace(" and ", " & ")).filter(Boolean))),
+    certifications: m?.certifications ?? r.certifications, opportunities: m?.opportunities ?? r.opportunities, closedWon: m?.closedWon ?? r.closedWon,
+    winRate: m?.winRate ?? r.winRate, avgDealSize: m?.avgDealSize ?? r.avgDealSize, contact: m?.contact ?? r.partnerContact,
+    contacts: m?.contacts, implementationsDone: m?.implementationsDone ?? null, partnerManagerEmail: m?.contacts.partnerManager.email ?? null, overview: clean(r.overview ?? ""),
     partnerManager: m?.partnerManager ?? null,
     activationState: m?.activationState ?? null,
   };

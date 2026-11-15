@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as DealsRouteImport } from './routes/deals'
 import { Route as EnablementRouteImport } from './routes/enablement'
 import { Route as RulesRouteImport } from './routes/rules'
+import { Route as PartnersPartnerIdRouteImport } from './routes/partners.$partnerId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +35,25 @@ const RulesRoute = RulesRouteImport.update({
   path: '/rules',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PartnersPartnerIdRoute = PartnersPartnerIdRouteImport.update({
+  id: '/partners/$partnerId',
+  path: '/partners/$partnerId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/deals': typeof DealsRoute
   '/enablement': typeof EnablementRoute
   '/rules': typeof RulesRoute
+  '/partners/$partnerId': typeof PartnersPartnerIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/deals': typeof DealsRoute
   '/enablement': typeof EnablementRoute
   '/rules': typeof RulesRoute
+  '/partners/$partnerId': typeof PartnersPartnerIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,20 @@ export interface FileRoutesById {
   '/deals': typeof DealsRoute
   '/enablement': typeof EnablementRoute
   '/rules': typeof RulesRoute
+  '/partners/$partnerId': typeof PartnersPartnerIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/deals' | '/enablement' | '/rules'
+  fullPaths: '/' | '/deals' | '/enablement' | '/rules' | '/partners/$partnerId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/deals' | '/enablement' | '/rules'
-  id: '__root__' | '/' | '/deals' | '/enablement' | '/rules'
+  to: '/' | '/deals' | '/enablement' | '/rules' | '/partners/$partnerId'
+  id:
+    | '__root__'
+    | '/'
+    | '/deals'
+    | '/enablement'
+    | '/rules'
+    | '/partners/$partnerId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +82,7 @@ export interface RootRouteChildren {
   DealsRoute: typeof DealsRoute
   EnablementRoute: typeof EnablementRoute
   RulesRoute: typeof RulesRoute
+  PartnersPartnerIdRoute: typeof PartnersPartnerIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +115,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RulesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/partners/$partnerId': {
+      id: '/partners/$partnerId'
+      path: '/partners/$partnerId'
+      fullPath: '/partners/$partnerId'
+      preLoaderRoute: typeof PartnersPartnerIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +130,7 @@ const rootRouteChildren: RootRouteChildren = {
   DealsRoute: DealsRoute,
   EnablementRoute: EnablementRoute,
   RulesRoute: RulesRoute,
+  PartnersPartnerIdRoute: PartnersPartnerIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

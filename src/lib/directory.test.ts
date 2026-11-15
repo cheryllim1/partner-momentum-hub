@@ -1,7 +1,13 @@
 import { describe, it, expect } from "vitest";
-import { DIRECTORY, filterPartners, incentivesWithOverrides } from "./directory";
+import { DIRECTORY, filterPartners, incentivesWithOverrides, seedDoneDir } from "./directory";
 describe("directory", () => {
   it("loads all 604 uploaded partners", () => expect(DIRECTORY.length).toBe(604));
+  it("Bronze has no completed enablement despite uploaded certifications", () => {
+    const bronze = DIRECTORY.find((p) => p.name === "CTI Consulting GmbH");
+    expect(bronze?.certifications).toBe(5);
+    if (!bronze) throw new Error("Missing CTI");
+    expect(seedDoneDir(bronze).size).toBe(0);
+  });
   it("filters by tier", () => expect(filterPartners(DIRECTORY, { q: "", tier: "Platinum", region: "", type: "" }).length).toBe(75));
   it("filters by type", () => expect(filterPartners(DIRECTORY, { q: "", tier: "", region: "", type: "Reseller" }).length).toBe(173));
   it("overrides change voucher and SE threshold", () => {

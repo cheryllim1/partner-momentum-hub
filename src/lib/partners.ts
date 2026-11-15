@@ -7,27 +7,41 @@ export const cleanHtml = (s: string) => s.replace(/&nbsp;/g, " ").replace(/&amp;
 
 export type ActivationState = "At Risk of Dormancy" | "Dormant (90d+)" | "Activated (1st Deal Reg)" | "Newly Signed (0-30d)";
 export type Tier = "Platinum" | "Gold" | "Silver" | "Bronze";
+export type PartnerContact = { name: string; email: string; role?: string };
 export interface Partner {
-  id: string; name: string; tier: Tier; motion: string; region: string; partnerManager: string;
-  daysSinceSigned: number; activationState: ActivationState; portalLoggedIn: boolean; salesKitDownloaded: boolean;
+  id: string; name: string; tier: Tier; motion: string; region: string; country: string; type: string; partnerManager: string;
+  daysSinceSigned: number; daysSinceLastDeal: number | null; lastActiveUpdate: string;
+  activationState: ActivationState; portalLoggedIn: boolean; salesKitDownloaded: boolean;
   accountOverlapCount: number; dealsRegistered: number; certifications: number; recommendedPlay: string;
-  contact: { name: string; role: string; email: string } | null; overview: string;
+  opportunities: number; opportunityStages: { discovery: number; solution: number; proposal: number; negotiation: number; closedWon: number };
+  closedWon: number; winRate: number; avgDealSize: number; verticals: string[]; implementationsDone: number;
+  contacts: { ceo: PartnerContact; partnerContact: PartnerContact; partnerManager: PartnerContact };
+  contact: PartnerContact; overview: string;
 }
+const cleanContact = (c: PartnerContact): PartnerContact => ({ ...c, email: c.email.replace(/'/g, "") });
 export const PARTNERS: Partner[] = momentum.map((m) => {
   const r = masterById.get(m.id) ?? masterByName.get(m.name.toLowerCase());
+  const contacts = { ceo: cleanContact(m.contacts.ceo), partnerContact: cleanContact(m.contacts.partnerContact), partnerManager: cleanContact(m.contacts.partnerManager) };
   return {
-    ...(m as unknown as Omit<Partner, "contact" | "overview">),
-    tier: m.tier as Tier, activationState: m.activationState as ActivationState,
-    contact: m.partnerContact ?? r?.partnerContact ?? null, overview: cleanHtml(m.overview || r?.overview || ""),
+    ...m, tier: m.tier as Tier, activationState: m.activationState as ActivationState,
+    contacts, contact: contacts.partnerContact, partnerManager: contacts.partnerManager.name,
+    motion: m.tier === "Platinum" ? "1:1" : m.tier === "Gold" ? "1:Few" : "1:Many",
+    portalLoggedIn: false, salesKitDownloaded: false, recommendedPlay: "",
+    overview: cleanHtml(r?.overview ?? ""),
   };
 });
+
+export function partnerTiming(p: Pick<Partner, "tier" | "daysSinceSigned" | "daysSinceLastDeal">) {
+  if (p.tier === "Bronze") return `${p.daysSinceSigned}d since signed`;
+  return p.daysSinceLastDeal === null ? null : `${p.daysSinceLastDeal}d since last deal`;
+}
 
 export function computeKpis(ps: Partner[]) {
   const activated = ps.filter((p) => p.dealsRegistered > 0);
   const risk = ps.filter((p) => p.dealsRegistered === 0 && (p.activationState === "At Risk of Dormancy" || p.activationState === "Dormant (90d+)"));
   return {
     activationRate: ps.length ? (activated.length / ps.length) * 100 : 0,
-    avgDays: activated.length ? Math.round(activated.reduce((s, p) => s + p.daysSinceSigned, 0) / activated.length) : 0,
+    openOpportunities: ps.reduce((s, p) => s + p.opportunityStages.discovery + p.opportunityStages.solution + p.opportunityStages.proposal + p.opportunityStages.negotiation, 0),
     atRisk: risk.length,
     untapped: risk.reduce((s, p) => s + p.accountOverlapCount, 0),
   };

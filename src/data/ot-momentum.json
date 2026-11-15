@@ -2,691 +2,1411 @@
   {
     "id": "OT-115",
     "name": "CGI",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "Canada,US",
     "country": "Canada",
-    "partnerManager": "David Chen",
-    "partnerContact": {
-      "name": "Claire O'Connor",
-      "role": "Alliance & Channel Manager",
-      "email": "claire.oconnor@cg.com"
-    },
-    "daysSinceSigned": 25,
+    "tier": "Silver",
+    "type": "System Integrator",
     "activationState": "Activated (1st Deal Reg)",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 7,
     "dealsRegistered": 1,
+    "daysSinceSigned": 43,
+    "daysSinceLastDeal": 16,
+    "lastActiveUpdate": "Deal registered 7d ago",
+    "opportunities": 4,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 1
+    },
+    "closedWon": 1,
+    "winRate": 25.0,
+    "avgDealSize": 280000,
+    "verticals": [
+      "Supply Chain",
+      "Manufacturing",
+      "Financial Services"
+    ],
     "certifications": 3,
-    "recommendedPlay": "Unlock 50% Cert Voucher & Assign SE Pre-Sales Support",
-    "overview": "CGI Technologies and Solutions Inc. provides information technology and business processing services. The Company offers information technology outsourcing, infrastructure, application management, system integration, and consulting services. CGI Technologies and Solutions..."
+    "implementationsDone": 2,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 1",
+        "email": "ceo@cgi.com"
+      },
+      "partnerContact": {
+        "name": "Claire O'Connor",
+        "role": "Alliance & Channel Manager",
+        "email": "claire.o'connor@cg.com"
+      },
+      "partnerManager": {
+        "name": "David Chen",
+        "email": "dchen@opentext.com"
+      }
+    },
+    "accountOverlapCount": 17
   },
   {
     "id": "OT-026",
     "name": "Ajila AG",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "DACH",
     "country": "Switzerland",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "David Weber",
-      "role": "Alliance & Channel Manager",
-      "email": "david.weber@ajilaag.com"
+    "tier": "Silver",
+    "type": "System Integrator",
+    "activationState": "At Risk of Dormancy",
+    "dealsRegistered": 0,
+    "daysSinceSigned": 40,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 14 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
     },
-    "daysSinceSigned": 89,
-    "activationState": "Activated (1st Deal Reg)",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 3,
-    "dealsRegistered": 1,
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 95000,
+    "verticals": [
+      "Public Sector",
+      "Manufacturing",
+      "Healthcare"
+    ],
     "certifications": 2,
-    "recommendedPlay": "Unlock 50% Cert Voucher & Assign SE Pre-Sales Support",
-    "overview": "Ajila is the leading and first competence centre of Switzerland for the implementation of form- and document-based processes. For over 10 years (since 2003), we modernize and simplify business processes of our customers related to Digital Forms, Business Process Management..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 2",
+        "email": "ceo@ajilaag.com"
+      },
+      "partnerContact": {
+        "name": "David Weber",
+        "role": "Alliance & Channel Manager",
+        "email": "david.weber@ajilaag.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 12
   },
   {
     "id": "OT-282",
     "name": "Infobuilder Technologies",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "SE Asia",
     "country": "Philippines",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Lucas Rossi",
-      "role": "Alliance & Channel Manager",
-      "email": "lucas.rossi@infobuildertechnol.com"
+    "tier": "Silver",
+    "type": "System Integrator",
+    "activationState": "At Risk of Dormancy",
+    "dealsRegistered": 0,
+    "daysSinceSigned": 67,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 10 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
     },
-    "daysSinceSigned": 60,
-    "activationState": "Activated (1st Deal Reg)",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 7,
-    "dealsRegistered": 3,
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 180000,
+    "verticals": [
+      "Supply Chain",
+      "Financial Services",
+      "Public Sector"
+    ],
     "certifications": 5,
-    "recommendedPlay": "Unlock 50% Cert Voucher & Assign SE Pre-Sales Support",
-    "overview": "A Philippine-based Information Technology firm that pioneers in introducing innovative technology that provides the newest and most systematic way of managing documents via Enterprise Content Management (ECM) System. Adopting Documentum technology in 2009, Infobuilder has..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 3",
+        "email": "ceo@infobuildertechnologies.com"
+      },
+      "partnerContact": {
+        "name": "Lucas Rossi",
+        "role": "Alliance & Channel Manager",
+        "email": "lucas.rossi@infobuildertechnol.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 16
   },
   {
     "id": "OT-251",
     "name": "Help Print Solutions SL",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "Iberia",
     "country": "Spain",
-    "partnerManager": "Carlos Mendez",
-    "partnerContact": {
-      "name": "Sarah Bennett",
-      "role": "Alliance & Channel Manager",
-      "email": "sarah.bennett@helpprintsolutions.com"
-    },
-    "daysSinceSigned": 85,
+    "tier": "Silver",
+    "type": "Reseller",
     "activationState": "Activated (1st Deal Reg)",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 5,
     "dealsRegistered": 1,
+    "daysSinceSigned": 75,
+    "daysSinceLastDeal": 27,
+    "lastActiveUpdate": "Deal registered 13d ago",
+    "opportunities": 4,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 1
+    },
+    "closedWon": 1,
+    "winRate": 25.0,
+    "avgDealSize": 280000,
+    "verticals": [
+      "Public Sector",
+      "Automotive",
+      "Healthcare"
+    ],
     "certifications": 9,
-    "recommendedPlay": "Unlock 50% Cert Voucher & Assign SE Pre-Sales Support",
-    "overview": "Add value to your information\u2026 HPS delivers technical solutions and professional consulting services that help and enhance the management and distribution of multi-channel customer communications. We lend our services, in Spain and Portugal, to the main companies of sectors..."
+    "implementationsDone": 8,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 4",
+        "email": "ceo@helpprintsolutionssl.com"
+      },
+      "partnerContact": {
+        "name": "Sarah Bennett",
+        "role": "Alliance & Channel Manager",
+        "email": "sarah.bennett@helpprintsolutions.com"
+      },
+      "partnerManager": {
+        "name": "Carlos Mendez",
+        "email": "cmendez@opentext.com"
+      }
+    },
+    "accountOverlapCount": 17
   },
   {
     "id": "OT-229",
     "name": "Fujifilm Business Innovation (Thailand) Co., Ltd.",
-    "tier": "Gold",
-    "motion": "1:Few Cohort",
     "region": "SE Asia",
     "country": "Thailand",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Sarah Rossi",
-      "role": "Alliance & Channel Manager",
-      "email": "sarah.rossi@fujifilmbusinessin.com"
-    },
-    "daysSinceSigned": 110,
+    "tier": "Gold",
+    "type": "System Integrator",
     "activationState": "Activated (1st Deal Reg)",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 11,
-    "dealsRegistered": 1,
+    "dealsRegistered": 5,
+    "daysSinceSigned": 64,
+    "daysSinceLastDeal": 50,
+    "lastActiveUpdate": "Deal registered 13d ago",
+    "opportunities": 14,
+    "opportunityStages": {
+      "discovery": 2,
+      "solution": 3,
+      "proposal": 2,
+      "negotiation": 2,
+      "closedWon": 5
+    },
+    "closedWon": 5,
+    "winRate": 35.7,
+    "avgDealSize": 95000,
+    "verticals": [
+      "Public Sector",
+      "Supply Chain",
+      "Manufacturing"
+    ],
     "certifications": 9,
-    "recommendedPlay": "Unlock 50% Cert Voucher & Assign SE Pre-Sales Support",
-    "overview": "Solutions &amp; Services Business Providing document services which include system integration, management of multifunction devices, and Business Process Outsourcing of mission-critical processes., tailored to various industries or business processes to meet business challenges."
+    "implementationsDone": 1,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 5",
+        "email": "ceo@fujifilmbusinessinnovation(thailand)co.,ltd..com"
+      },
+      "partnerContact": {
+        "name": "Sarah Rossi",
+        "role": "Alliance & Channel Manager",
+        "email": "sarah.rossi@fujifilmbusinessin.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 15
   },
   {
     "id": "OT-143",
     "name": "CTI Consulting GmbH",
-    "tier": "Bronze",
-    "motion": "1:Many Digital",
     "region": "DACH",
     "country": "Austria",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Claire Vance",
-      "role": "Alliance & Channel Manager",
-      "email": "claire.vance@cticonsultinggmbh.com"
+    "tier": "Bronze",
+    "type": "System Integrator",
+    "activationState": "Newly Signed (0-30d)",
+    "dealsRegistered": 0,
+    "daysSinceSigned": 30,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 4 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
     },
-    "daysSinceSigned": 60,
-    "activationState": "Activated (1st Deal Reg)",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 7,
-    "dealsRegistered": 3,
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 120000,
+    "verticals": [
+      "Automotive",
+      "Financial Services",
+      "Healthcare"
+    ],
     "certifications": 5,
-    "recommendedPlay": "Unlock 50% Cert Voucher & Assign SE Pre-Sales Support",
-    "overview": "CTI CONSULTING has been advising big corporations as well as medium-sized businesses on a national and international level since 1991. We provide consulting services across sectors in the business areas of IT Management and SAP Consulting. Renowned clients are accompanied..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 6",
+        "email": "ceo@cticonsultinggmbh.com"
+      },
+      "partnerContact": {
+        "name": "Claire Vance",
+        "role": "Alliance & Channel Manager",
+        "email": "claire.vance@cticonsultinggmbh.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 19
   },
   {
     "id": "OT-105",
     "name": "Carahsoft Technology Corp",
-    "tier": "Platinum",
-    "motion": "1:1 Strategic",
     "region": "US",
     "country": "United States",
-    "partnerManager": "David Chen",
-    "partnerContact": {
-      "name": "David O'Connor",
-      "role": "Alliance & Channel Manager",
-      "email": "david.oconnor@carahsofttechnolog.com"
-    },
-    "daysSinceSigned": 57,
+    "tier": "Platinum",
+    "type": "Service Providers",
     "activationState": "Activated (1st Deal Reg)",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 10,
-    "dealsRegistered": 3,
+    "dealsRegistered": 5,
+    "daysSinceSigned": 48,
+    "daysSinceLastDeal": 25,
+    "lastActiveUpdate": "Deal registered 13d ago",
+    "opportunities": 14,
+    "opportunityStages": {
+      "discovery": 2,
+      "solution": 3,
+      "proposal": 2,
+      "negotiation": 2,
+      "closedWon": 5
+    },
+    "closedWon": 5,
+    "winRate": 35.7,
+    "avgDealSize": 280000,
+    "verticals": [
+      "Supply Chain",
+      "Healthcare",
+      "Financial Services"
+    ],
     "certifications": 18,
-    "recommendedPlay": "Unlock 50% Cert Voucher & Assign SE Pre-Sales Support",
-    "overview": "Carahsoft is The Trusted IT Solutions Provider&reg;, supporting Federal, State, Local Government, Education, Healthcare, and Private Sector industries. As the Master Aggregator&trade; for our vendor,&nbsp;reseller&nbsp;and integrator partners, we deliver solutions for..."
+    "implementationsDone": 7,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 7",
+        "email": "ceo@carahsofttechnologycorp.com"
+      },
+      "partnerContact": {
+        "name": "David O'Connor",
+        "role": "Alliance & Channel Manager",
+        "email": "david.o'connor@carahsofttechnolog.com"
+      },
+      "partnerManager": {
+        "name": "David Chen",
+        "email": "dchen@opentext.com"
+      }
+    },
+    "accountOverlapCount": 16
   },
   {
     "id": "OT-559",
     "name": "Avaali Solutions Pvt. Ltd",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "India",
     "country": "India",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Elena Schmidt",
-      "role": "Alliance & Channel Manager",
-      "email": "elena.schmidt@avaalisolutionspvt.com"
-    },
-    "daysSinceSigned": 89,
+    "tier": "Silver",
+    "type": "System Integrator",
     "activationState": "At Risk of Dormancy",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 4,
     "dealsRegistered": 0,
+    "daysSinceSigned": 58,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 7 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
+    },
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 180000,
+    "verticals": [
+      "Manufacturing",
+      "Public Sector",
+      "Healthcare"
+    ],
     "certifications": 5,
-    "recommendedPlay": "Push Overlapping Target Accounts + First-Deal SPIFF",
-    "overview": "Avaali is a consulting and professional services organization focused on supporting upper mid to large enterprises to create and execute their Digital roadmap."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 8",
+        "email": "ceo@avaalisolutionspvt.ltd.com"
+      },
+      "partnerContact": {
+        "name": "Elena Schmidt",
+        "role": "Alliance & Channel Manager",
+        "email": "elena.schmidt@avaalisolutionspvt.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 10
   },
   {
     "id": "OT-090",
     "name": "Booz Allen Hamilton Inc.",
-    "tier": "Bronze",
-    "motion": "1:Many Digital",
     "region": "US",
     "country": "United States",
-    "partnerManager": "David Chen",
-    "partnerContact": {
-      "name": "Priya Patel",
-      "role": "Alliance & Channel Manager",
-      "email": "priya.patel@boozallenhamilton.com"
-    },
-    "daysSinceSigned": 71,
-    "activationState": "At Risk of Dormancy",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 7,
+    "tier": "Bronze",
+    "type": "Reseller",
+    "activationState": "Newly Signed (0-30d)",
     "dealsRegistered": 0,
+    "daysSinceSigned": 32,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 7 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
+    },
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 280000,
+    "verticals": [
+      "Financial Services",
+      "Healthcare",
+      "Supply Chain"
+    ],
     "certifications": 11,
-    "recommendedPlay": "Push Overlapping Target Accounts + First-Deal SPIFF",
-    "overview": "Booz Allen is a technology leader trusted to accelerate change at the heart of our clients&rsquo; missions. Our strength is the talent of 35,900 professionals driven by a single purpose: Empower people to change the world&reg; Trusted as the largest provider of AI to the..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 9",
+        "email": "ceo@boozallenhamiltoninc..com"
+      },
+      "partnerContact": {
+        "name": "Priya Patel",
+        "role": "Alliance & Channel Manager",
+        "email": "priya.patel@boozallenhamilton.com"
+      },
+      "partnerManager": {
+        "name": "David Chen",
+        "email": "dchen@opentext.com"
+      }
+    },
+    "accountOverlapCount": 22
   },
   {
     "id": "OT-433",
     "name": "pit-cup GmbH",
-    "tier": "Bronze",
-    "motion": "1:Many Digital",
     "region": "Global",
     "country": "Germany",
-    "partnerManager": "Marcus Lindqvist",
-    "partnerContact": {
-      "name": "Marcus Bennett",
-      "role": "Alliance & Channel Manager",
-      "email": "marcus.bennett@pitcupgmbh.com"
-    },
-    "daysSinceSigned": 110,
-    "activationState": "Dormant (90d+)",
-    "portalLoggedIn": false,
-    "salesKitDownloaded": false,
-    "accountOverlapCount": 5,
+    "tier": "Bronze",
+    "type": "System Integrator",
+    "activationState": "Newly Signed (0-30d)",
     "dealsRegistered": 0,
+    "daysSinceSigned": 5,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 2 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
+    },
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 120000,
+    "verticals": [
+      "Public Sector",
+      "Supply Chain",
+      "Manufacturing"
+    ],
     "certifications": 8,
-    "recommendedPlay": "Book 1:1 Executive Account Mapping Session",
-    "overview": "Die pit - cup GmbH mit Hauptsitz in Heidelberg ist ihr verl&auml;sslicher Partner, wenn es um IT-L&ouml;sungen rund um den Lebenszyklus einer Immobilie geht. Von der ersten Planungsphase in einem BIM-Projekt mit pit - CAD und den BIM-Tools bis zur Immobilienbewirtschaftung..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 10",
+        "email": "ceo@pit-cupgmbh.com"
+      },
+      "partnerContact": {
+        "name": "Marcus Bennett",
+        "role": "Alliance & Channel Manager",
+        "email": "marcus.bennett@pitcupgmbh.com"
+      },
+      "partnerManager": {
+        "name": "Marcus Lindqvist",
+        "email": "mlindqvist@opentext.com"
+      }
+    },
+    "accountOverlapCount": 14
   },
   {
     "id": "OT-033",
     "name": "Amxecure Co., Ltd.",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "Taiwan",
     "country": "Taiwan",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Marcus Vance",
-      "role": "Alliance & Channel Manager",
-      "email": "marcus.vance@amxecurecoltd.com"
-    },
-    "daysSinceSigned": 117,
+    "tier": "Silver",
+    "type": "Solution Extension",
     "activationState": "Activated (1st Deal Reg)",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 6,
-    "dealsRegistered": 3,
+    "dealsRegistered": 1,
+    "daysSinceSigned": 85,
+    "daysSinceLastDeal": 10,
+    "lastActiveUpdate": "Deal registered 13d ago",
+    "opportunities": 4,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 1
+    },
+    "closedWon": 1,
+    "winRate": 25.0,
+    "avgDealSize": 280000,
+    "verticals": [
+      "Automotive",
+      "Healthcare",
+      "Manufacturing"
+    ],
     "certifications": 4,
-    "recommendedPlay": "Unlock 50% Cert Voucher & Assign SE Pre-Sales Support",
-    "overview": "AmXecure Co.,Ltd is OpenText Silver reseller and technical service partner focus on Fortify, Sonatype, WebInspect selling and consultant service of source code security issues analysis and web vulnerability consultant."
+    "implementationsDone": 5,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 11",
+        "email": "ceo@amxecureco.,ltd..com"
+      },
+      "partnerContact": {
+        "name": "Marcus Vance",
+        "role": "Alliance & Channel Manager",
+        "email": "marcus.vance@amxecurecoltd.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 21
   },
   {
     "id": "OT-031",
     "name": "AmeXio Netherlands BV",
-    "tier": "Platinum",
-    "motion": "1:1 Strategic",
     "region": "Benelux",
     "country": "Belgium",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "David Patel",
-      "role": "Alliance & Channel Manager",
-      "email": "david.patel@amexionetherlandsb.com"
-    },
-    "daysSinceSigned": 20,
+    "tier": "Platinum",
+    "type": "Referral",
     "activationState": "Activated (1st Deal Reg)",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 23,
     "dealsRegistered": 3,
+    "daysSinceSigned": 107,
+    "daysSinceLastDeal": 33,
+    "lastActiveUpdate": "Deal registered 14d ago",
+    "opportunities": 8,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 2,
+      "proposal": 1,
+      "negotiation": 1,
+      "closedWon": 3
+    },
+    "closedWon": 3,
+    "winRate": 37.5,
+    "avgDealSize": 280000,
+    "verticals": [
+      "Healthcare",
+      "Manufacturing",
+      "Supply Chain"
+    ],
     "certifications": 13,
-    "recommendedPlay": "Unlock 50% Cert Voucher & Assign SE Pre-Sales Support",
-    "overview": "AmeXio has been a well-known Content Services partner for over 20 years, helping Documentum and Content Suite (xECM) customers with advice, design, implementation, and maintenance of their business-critical Content Services platforms. Deep technical knowledge, long-standing..."
+    "implementationsDone": 1,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 12",
+        "email": "ceo@amexionetherlandsbv.com"
+      },
+      "partnerContact": {
+        "name": "David Patel",
+        "role": "Alliance & Channel Manager",
+        "email": "david.patel@amexionetherlandsb.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 8
   },
   {
     "id": "OT-096",
     "name": "BTS Strategic Consulting Pty Ltd",
-    "tier": "Gold",
-    "motion": "1:Few Cohort",
     "region": "ANZ",
     "country": "Australia",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Claire Lindqvist",
-      "role": "Alliance & Channel Manager",
-      "email": "claire.lindqvist@btsstrategicconsul.com"
+    "tier": "Gold",
+    "type": "Technology",
+    "activationState": "Activated (1st Deal Reg)",
+    "dealsRegistered": 3,
+    "daysSinceSigned": 76,
+    "daysSinceLastDeal": 63,
+    "lastActiveUpdate": "Deal registered 14d ago",
+    "opportunities": 10,
+    "opportunityStages": {
+      "discovery": 2,
+      "solution": 2,
+      "proposal": 2,
+      "negotiation": 1,
+      "closedWon": 3
     },
-    "daysSinceSigned": 62,
-    "activationState": "At Risk of Dormancy",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": false,
-    "accountOverlapCount": 12,
-    "dealsRegistered": 0,
+    "closedWon": 3,
+    "winRate": 30.0,
+    "avgDealSize": 95000,
+    "verticals": [
+      "Manufacturing",
+      "Automotive",
+      "Public Sector"
+    ],
     "certifications": 20,
-    "recommendedPlay": "Push Overlapping Target Accounts + First-Deal SPIFF",
-    "overview": "BTS Strategic Consulting specialises in offering strategic advisory and software implementation services to end customer with the aim of helping them optimise their operations and maximise efficiency through technology adoption. With a dedicated team of consultants and..."
+    "implementationsDone": 8,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 13",
+        "email": "ceo@btsstrategicconsultingptyltd.com"
+      },
+      "partnerContact": {
+        "name": "Claire Lindqvist",
+        "role": "Alliance & Channel Manager",
+        "email": "claire.lindqvist@btsstrategicconsul.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 7
   },
   {
     "id": "OT-224",
     "name": "FOREFRONT TECHNOLOGIES",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "US",
     "country": "United States",
-    "partnerManager": "David Chen",
-    "partnerContact": {
-      "name": "Hannah Kowalski",
-      "role": "Alliance & Channel Manager",
-      "email": "hannah.kowalski@forefronttechnolog.com"
+    "tier": "Silver",
+    "type": "Service Providers",
+    "activationState": "At Risk of Dormancy",
+    "dealsRegistered": 0,
+    "daysSinceSigned": 98,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 7 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
     },
-    "daysSinceSigned": 45,
-    "activationState": "Activated (1st Deal Reg)",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 8,
-    "dealsRegistered": 3,
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 280000,
+    "verticals": [
+      "Automotive",
+      "Supply Chain",
+      "Financial Services"
+    ],
     "certifications": 4,
-    "recommendedPlay": "Unlock 50% Cert Voucher & Assign SE Pre-Sales Support",
-    "overview": "Forefront Technologies is an OpenText Certified Partner that focuses on Information Management services, software and solutions. Headquartered in North Carolina and having technical resources located across the country, we have spent the last 20 years assisting customers..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 14",
+        "email": "ceo@forefronttechnologies.com"
+      },
+      "partnerContact": {
+        "name": "Hannah Kowalski",
+        "role": "Alliance & Channel Manager",
+        "email": "hannah.kowalski@forefronttechnolog.com"
+      },
+      "partnerManager": {
+        "name": "David Chen",
+        "email": "dchen@opentext.com"
+      }
+    },
+    "accountOverlapCount": 22
   },
   {
     "id": "OT-239",
     "name": "Globinfosec Pvt Ltd.",
-    "tier": "Bronze",
-    "motion": "1:Many Digital",
     "region": "India",
     "country": "India",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Elena Lindqvist",
-      "role": "Alliance & Channel Manager",
-      "email": "elena.lindqvist@globinfosecpvtltd.com"
-    },
-    "daysSinceSigned": 86,
-    "activationState": "At Risk of Dormancy",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 4,
+    "tier": "Bronze",
+    "type": "Technology",
+    "activationState": "Newly Signed (0-30d)",
     "dealsRegistered": 0,
+    "daysSinceSigned": 17,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 7 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
+    },
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 180000,
+    "verticals": [
+      "Healthcare",
+      "Financial Services",
+      "Manufacturing"
+    ],
     "certifications": 6,
-    "recommendedPlay": "Push Overlapping Target Accounts + First-Deal SPIFF",
-    "overview": "We specialize in providing comprehensive cybersecurity services designed to protect organizations from evolving digital threats and ensure the integrity, confidentiality, and availability of their critical information assets."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 15",
+        "email": "ceo@globinfosecpvtltd..com"
+      },
+      "partnerContact": {
+        "name": "Elena Lindqvist",
+        "role": "Alliance & Channel Manager",
+        "email": "elena.lindqvist@globinfosecpvtltd.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 12
   },
   {
     "id": "OT-518",
     "name": "Advania Norge AS",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "Austria",
     "country": "Austria",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Sarah Rossi",
-      "role": "Alliance & Channel Manager",
-      "email": "sarah.rossi@advanianorgeas.com"
+    "tier": "Silver",
+    "type": "System Integrator",
+    "activationState": "Activated (1st Deal Reg)",
+    "dealsRegistered": 2,
+    "daysSinceSigned": 58,
+    "daysSinceLastDeal": 11,
+    "lastActiveUpdate": "Deal registered 11d ago",
+    "opportunities": 5,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 2
     },
-    "daysSinceSigned": 77,
-    "activationState": "At Risk of Dormancy",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 3,
-    "dealsRegistered": 0,
+    "closedWon": 2,
+    "winRate": 40.0,
+    "avgDealSize": 95000,
+    "verticals": [
+      "Healthcare",
+      "Automotive",
+      "Manufacturing"
+    ],
     "certifications": 3,
-    "recommendedPlay": "Push Overlapping Target Accounts + First-Deal SPIFF",
-    "overview": "Painkiller your Advania security partner experts with full end to end competence"
+    "implementationsDone": 1,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 16",
+        "email": "ceo@advanianorgeas.com"
+      },
+      "partnerContact": {
+        "name": "Sarah Rossi",
+        "role": "Alliance & Channel Manager",
+        "email": "sarah.rossi@advanianorgeas.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 12
   },
   {
     "id": "OT-028",
     "name": "Aktive Reply SRL",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "Italy",
     "country": "Italy",
-    "partnerManager": "Elena Conti",
-    "partnerContact": {
-      "name": "Julien Lindqvist",
-      "role": "Alliance & Channel Manager",
-      "email": "julien.lindqvist@aktivereplysrl.com"
-    },
-    "daysSinceSigned": 31,
+    "tier": "Silver",
+    "type": "Reseller",
     "activationState": "At Risk of Dormancy",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": false,
-    "accountOverlapCount": 3,
     "dealsRegistered": 0,
+    "daysSinceSigned": 38,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 13 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
+    },
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 280000,
+    "verticals": [
+      "Automotive",
+      "Supply Chain",
+      "Financial Services"
+    ],
     "certifications": 10,
-    "recommendedPlay": "Push Overlapping Target Accounts + First-Deal SPIFF",
-    "overview": "Aktive Reply is the Reply Group Company historically focused on Digital Content Integration and Delivery. Since 1998 we support/manage enterprise international customers to design and implement solutions of Digital Transformation and Multichannel Digital Marketing based on..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 17",
+        "email": "ceo@aktivereplysrl.com"
+      },
+      "partnerContact": {
+        "name": "Julien Lindqvist",
+        "role": "Alliance & Channel Manager",
+        "email": "julien.lindqvist@aktivereplysrl.com"
+      },
+      "partnerManager": {
+        "name": "Elena Conti",
+        "email": "econti@opentext.com"
+      }
+    },
+    "accountOverlapCount": 22
   },
   {
     "id": "OT-575",
     "name": "BCSolutions",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "France",
     "country": "France",
-    "partnerManager": "Claire Moreau",
-    "partnerContact": {
-      "name": "Julien Weber",
-      "role": "Alliance & Channel Manager",
-      "email": "julien.weber@bcsolutions.com"
-    },
-    "daysSinceSigned": 61,
+    "tier": "Silver",
+    "type": "Service Providers",
     "activationState": "At Risk of Dormancy",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": false,
-    "accountOverlapCount": 6,
     "dealsRegistered": 0,
+    "daysSinceSigned": 46,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 21 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
+    },
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 180000,
+    "verticals": [
+      "Automotive",
+      "Financial Services",
+      "Healthcare"
+    ],
     "certifications": 1,
-    "recommendedPlay": "Push Overlapping Target Accounts + First-Deal SPIFF",
-    "overview": "BCSolutions has been supporting companies in their dematerialisation and document managementprojects since 2003. Thanks to its partnerships with OpenText and Sovos, BCSolutions offers solutions such as electronic invoicing, document dematerialisation, content management and..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 18",
+        "email": "ceo@bcsolutions.com"
+      },
+      "partnerContact": {
+        "name": "Julien Weber",
+        "role": "Alliance & Channel Manager",
+        "email": "julien.weber@bcsolutions.com"
+      },
+      "partnerManager": {
+        "name": "Claire Moreau",
+        "email": "cmoreau@opentext.com"
+      }
+    },
+    "accountOverlapCount": 8
   },
   {
     "id": "OT-204",
     "name": "Escom Bulgaria Eood",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "Bulgaria",
     "country": "Bulgaria",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Julien Lindqvist",
-      "role": "Alliance & Channel Manager",
-      "email": "julien.lindqvist@escombulgariaeood.com"
-    },
-    "daysSinceSigned": 82,
+    "tier": "Silver",
+    "type": "Service Providers",
     "activationState": "At Risk of Dormancy",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 3,
     "dealsRegistered": 0,
+    "daysSinceSigned": 42,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 14 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
+    },
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 180000,
+    "verticals": [
+      "Financial Services",
+      "Manufacturing",
+      "Healthcare"
+    ],
     "certifications": 22,
-    "recommendedPlay": "Push Overlapping Target Accounts + First-Deal SPIFF",
-    "overview": "Escom Bulgaria Ltd is a Value-Added Distributor of leading vendors of Information Security solutions and IT infrastructure in the territory of Bulgaria. As a VAD, Escom Bulgaria is highly qualified in the processes of RFI, test installations, proof of concepts, project..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 19",
+        "email": "ceo@escombulgariaeood.com"
+      },
+      "partnerContact": {
+        "name": "Julien Lindqvist",
+        "role": "Alliance & Channel Manager",
+        "email": "julien.lindqvist@escombulgariaeood.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 17
   },
   {
     "id": "OT-430",
     "name": "Piemme Telecom SRL",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "Italy",
     "country": "Italy",
-    "partnerManager": "Elena Conti",
-    "partnerContact": {
-      "name": "Marcus Rossi",
-      "role": "Alliance & Channel Manager",
-      "email": "marcus.rossi@piemmetelecomsrl.com"
-    },
-    "daysSinceSigned": 99,
-    "activationState": "Dormant (90d+)",
-    "portalLoggedIn": false,
-    "salesKitDownloaded": false,
-    "accountOverlapCount": 6,
+    "tier": "Silver",
+    "type": "Reseller",
+    "activationState": "At Risk of Dormancy",
     "dealsRegistered": 0,
+    "daysSinceSigned": 73,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 6 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
+    },
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 95000,
+    "verticals": [
+      "Automotive",
+      "Healthcare",
+      "Financial Services"
+    ],
     "certifications": 14,
-    "recommendedPlay": "Book 1:1 Executive Account Mapping Session",
-    "overview": "Piemme Telecom is part of Omniacom Group. Through the introduction of innovative processes, Omniacom Group presents itself as a technological partner capable of expressing all the skills necessary to dominate the entire value chain of a solution, supporting the customer and..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 20",
+        "email": "ceo@piemmetelecomsrl.com"
+      },
+      "partnerContact": {
+        "name": "Marcus Rossi",
+        "role": "Alliance & Channel Manager",
+        "email": "marcus.rossi@piemmetelecomsrl.com"
+      },
+      "partnerManager": {
+        "name": "Elena Conti",
+        "email": "econti@opentext.com"
+      }
+    },
+    "accountOverlapCount": 18
   },
   {
     "id": "OT-226",
     "name": "ForensicCorp Ltda",
-    "tier": "Bronze",
-    "motion": "1:Many Digital",
     "region": "Latin America",
     "country": "Chile",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Marcus O'Connor",
-      "role": "Alliance & Channel Manager",
-      "email": "marcus.oconnor@forensiccorpltda.com"
-    },
-    "daysSinceSigned": 110,
-    "activationState": "Dormant (90d+)",
-    "portalLoggedIn": false,
-    "salesKitDownloaded": false,
-    "accountOverlapCount": 3,
+    "tier": "Bronze",
+    "type": "System Integrator",
+    "activationState": "Newly Signed (0-30d)",
     "dealsRegistered": 0,
+    "daysSinceSigned": 16,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 4 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
+    },
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 180000,
+    "verticals": [
+      "Healthcare",
+      "Manufacturing",
+      "Public Sector"
+    ],
     "certifications": 13,
-    "recommendedPlay": "Book 1:1 Executive Account Mapping Session",
-    "overview": "Somos una empresa conformada por un equipo multidisciplinario de profesionales altamente calificado con una amplia experiencia y pioneros en Chile en brindar servicios de detecci&oacute;n y prevenci&oacute;n de fraudes corporativos, adem&aacute;s servicios integrales..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 21",
+        "email": "ceo@forensiccorpltda.com"
+      },
+      "partnerContact": {
+        "name": "Marcus O'Connor",
+        "role": "Alliance & Channel Manager",
+        "email": "marcus.o'connor@forensiccorpltda.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 22
   },
   {
     "id": "OT-460",
     "name": "PT. Jedi Global Teknologi",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "Indonesia",
     "country": "Indonesia",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Thomas Weber",
-      "role": "Alliance & Channel Manager",
-      "email": "thomas.weber@ptjediglobalteknol.com"
-    },
-    "daysSinceSigned": 49,
+    "tier": "Silver",
+    "type": "Reseller",
     "activationState": "At Risk of Dormancy",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": false,
-    "accountOverlapCount": 2,
     "dealsRegistered": 0,
+    "daysSinceSigned": 31,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 10 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
+    },
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 180000,
+    "verticals": [
+      "Financial Services",
+      "Public Sector",
+      "Automotive"
+    ],
     "certifications": 9,
-    "recommendedPlay": "Push Overlapping Target Accounts + First-Deal SPIFF",
-    "overview": "IT Managed Services Provider; a member of CTI Group"
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 22",
+        "email": "ceo@pt.jediglobalteknologi.com"
+      },
+      "partnerContact": {
+        "name": "Thomas Weber",
+        "role": "Alliance & Channel Manager",
+        "email": "thomas.weber@ptjediglobalteknol.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 17
   },
   {
     "id": "OT-604",
     "name": "Canon U.S.A., Inc.",
-    "tier": "Platinum",
-    "motion": "1:1 Strategic",
     "region": "US",
     "country": "United States",
-    "partnerManager": "David Chen",
-    "partnerContact": {
-      "name": "Lucas Bennett",
-      "role": "Alliance & Channel Manager",
-      "email": "lucas.bennett@canonusainc.com"
+    "tier": "Platinum",
+    "type": "Reseller",
+    "activationState": "Activated (1st Deal Reg)",
+    "dealsRegistered": 3,
+    "daysSinceSigned": 37,
+    "daysSinceLastDeal": 10,
+    "lastActiveUpdate": "Deal registered 8d ago",
+    "opportunities": 10,
+    "opportunityStages": {
+      "discovery": 2,
+      "solution": 2,
+      "proposal": 2,
+      "negotiation": 1,
+      "closedWon": 3
     },
-    "daysSinceSigned": 104,
-    "activationState": "Dormant (90d+)",
-    "portalLoggedIn": false,
-    "salesKitDownloaded": false,
-    "accountOverlapCount": 16,
-    "dealsRegistered": 0,
+    "closedWon": 3,
+    "winRate": 30.0,
+    "avgDealSize": 180000,
+    "verticals": [
+      "Supply Chain",
+      "Financial Services",
+      "Healthcare"
+    ],
     "certifications": 26,
-    "recommendedPlay": "Book 1:1 Executive Account Mapping Session",
-    "overview": "Canon Business Solutions is a Canon U.S.A. company that provides integrated systems technology for the document management industry. The company is among the leaders in the office equipment market. It features networked office systems, graphics equipment, copiers, printers,..."
+    "implementationsDone": 4,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 23",
+        "email": "ceo@canonu.s.a.,inc..com"
+      },
+      "partnerContact": {
+        "name": "Lucas Bennett",
+        "role": "Alliance & Channel Manager",
+        "email": "lucas.bennett@canonusainc.com"
+      },
+      "partnerManager": {
+        "name": "David Chen",
+        "email": "dchen@opentext.com"
+      }
+    },
+    "accountOverlapCount": 14
   },
   {
     "id": "OT-285",
     "name": "Infopulse Ukraine LLC",
-    "tier": "Bronze",
-    "motion": "1:Many Digital",
     "region": "CIS",
     "country": "Ukraine",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Elena Schmidt",
-      "role": "Alliance & Channel Manager",
-      "email": "elena.schmidt@infopulseukrainell.com"
-    },
-    "daysSinceSigned": 76,
-    "activationState": "At Risk of Dormancy",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 6,
+    "tier": "Bronze",
+    "type": "Solution Extension",
+    "activationState": "Newly Signed (0-30d)",
     "dealsRegistered": 0,
+    "daysSinceSigned": 18,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 10 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
+    },
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 65000,
+    "verticals": [
+      "Public Sector",
+      "Supply Chain",
+      "Manufacturing"
+    ],
     "certifications": 6,
-    "recommendedPlay": "Push Overlapping Target Accounts + First-Deal SPIFF",
-    "overview": "Providing end-to-end digital services and consulting, Infopulse brings in almost 30 years of IT expertise to enable the success of our clients in 30+ countries worldwide.&nbsp; We align the customers&rsquo; business objectives with the most suitable technology strategy to..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 24",
+        "email": "ceo@infopulseukrainellc.com"
+      },
+      "partnerContact": {
+        "name": "Elena Schmidt",
+        "role": "Alliance & Channel Manager",
+        "email": "elena.schmidt@infopulseukrainell.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 6
   },
   {
     "id": "OT-007",
     "name": "accel bi corporation",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "Canada",
     "country": "Canada",
-    "partnerManager": "David Chen",
-    "partnerContact": {
-      "name": "Claire Weber",
-      "role": "Alliance & Channel Manager",
-      "email": "claire.weber@accelbicorporation.com"
-    },
-    "daysSinceSigned": 93,
-    "activationState": "Dormant (90d+)",
-    "portalLoggedIn": false,
-    "salesKitDownloaded": false,
-    "accountOverlapCount": 5,
+    "tier": "Silver",
+    "type": "System Integrator",
+    "activationState": "At Risk of Dormancy",
     "dealsRegistered": 0,
+    "daysSinceSigned": 104,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 19 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
+    },
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 65000,
+    "verticals": [
+      "Healthcare",
+      "Manufacturing",
+      "Automotive"
+    ],
     "certifications": 24,
-    "recommendedPlay": "Book 1:1 Executive Account Mapping Session",
-    "overview": "accel bi leverages its strategic, scientific, and innovation expertise to help clients gain a competitive advantage, drive positive business impact and monetize your new solution adoption."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 25",
+        "email": "ceo@accelbicorporation.com"
+      },
+      "partnerContact": {
+        "name": "Claire Weber",
+        "role": "Alliance & Channel Manager",
+        "email": "claire.weber@accelbicorporation.com"
+      },
+      "partnerManager": {
+        "name": "David Chen",
+        "email": "dchen@opentext.com"
+      }
+    },
+    "accountOverlapCount": 24
   },
   {
     "id": "OT-164",
     "name": "Deloitte Consulting",
-    "tier": "Platinum",
-    "motion": "1:1 Strategic",
     "region": "US,India",
     "country": "India",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Thomas Bennett",
-      "role": "Alliance & Channel Manager",
-      "email": "thomas.bennett@deloitteconsulting.com"
+    "tier": "Platinum",
+    "type": "System Integrator",
+    "activationState": "Activated (1st Deal Reg)",
+    "dealsRegistered": 3,
+    "daysSinceSigned": 38,
+    "daysSinceLastDeal": 25,
+    "lastActiveUpdate": "Deal registered 8d ago",
+    "opportunities": 7,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 1,
+      "closedWon": 3
     },
-    "daysSinceSigned": 31,
-    "activationState": "At Risk of Dormancy",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 25,
-    "dealsRegistered": 0,
+    "closedWon": 3,
+    "winRate": 42.9,
+    "avgDealSize": 280000,
+    "verticals": [
+      "Automotive",
+      "Healthcare",
+      "Manufacturing"
+    ],
     "certifications": 136,
-    "recommendedPlay": "Push Overlapping Target Accounts + First-Deal SPIFF",
-    "overview": "Deloitte&#39;s Information Management (IM) practice includes one of the most experienced and highly regarded Enterprise Content Management (ECM) advisory and implementation service organizations in the world. Deloitte&rsquo;s IM practice encompasses a dedicated global and..."
+    "implementationsDone": 2,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 26",
+        "email": "ceo@deloitteconsulting.com"
+      },
+      "partnerContact": {
+        "name": "Thomas Bennett",
+        "role": "Alliance & Channel Manager",
+        "email": "thomas.bennett@deloitteconsulting.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 18
   },
   {
     "id": "OT-349",
     "name": "Konica Minolta Business Solutions (UK) Limited",
-    "tier": "Platinum",
-    "motion": "1:1 Strategic",
     "region": "Southern Europe,Northern Europe,DACH,UK,Central & Eastern Europe,Middle East",
     "country": "United Arab Emirates",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Claire Lindqvist",
-      "role": "Alliance & Channel Manager",
-      "email": "claire.lindqvist@konicaminoltabusin.com"
+    "tier": "Platinum",
+    "type": "Technology",
+    "activationState": "Activated (1st Deal Reg)",
+    "dealsRegistered": 4,
+    "daysSinceSigned": 114,
+    "daysSinceLastDeal": 43,
+    "lastActiveUpdate": "Deal registered 7d ago",
+    "opportunities": 20,
+    "opportunityStages": {
+      "discovery": 4,
+      "solution": 5,
+      "proposal": 4,
+      "negotiation": 3,
+      "closedWon": 4
     },
-    "daysSinceSigned": 111,
-    "activationState": "Dormant (90d+)",
-    "portalLoggedIn": false,
-    "salesKitDownloaded": false,
-    "accountOverlapCount": 8,
-    "dealsRegistered": 0,
+    "closedWon": 4,
+    "winRate": 20.0,
+    "avgDealSize": 120000,
+    "verticals": [
+      "Automotive",
+      "Supply Chain",
+      "Public Sector"
+    ],
     "certifications": 17,
-    "recommendedPlay": "Book 1:1 Executive Account Mapping Session",
-    "overview": "Konica Minolta transforms workplaces into digitally connected, efficient, and secure environments. From smart office and managed IT services to industrial printing, healthcare solutions, optical systems, and functional materials, we empower businesses across industries to..."
+    "implementationsDone": 7,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 27",
+        "email": "ceo@konicaminoltabusinesssolutions(uk)limited.com"
+      },
+      "partnerContact": {
+        "name": "Claire Lindqvist",
+        "role": "Alliance & Channel Manager",
+        "email": "claire.lindqvist@konicaminoltabusin.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 9
   },
   {
     "id": "OT-160",
     "name": "dbi services",
-    "tier": "Silver",
-    "motion": "1:Many Digital",
     "region": "DACH",
     "country": "Austria",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "David Weber",
-      "role": "Alliance & Channel Manager",
-      "email": "david.weber@dbiservices.com"
-    },
-    "daysSinceSigned": 88,
+    "tier": "Silver",
+    "type": "System Integrator",
     "activationState": "At Risk of Dormancy",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 3,
     "dealsRegistered": 0,
+    "daysSinceSigned": 115,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 17 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
+    },
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 65000,
+    "verticals": [
+      "Manufacturing",
+      "Financial Services",
+      "Public Sector"
+    ],
     "certifications": 2,
-    "recommendedPlay": "Push Overlapping Target Accounts + First-Deal SPIFF",
-    "overview": "Founded in 2010, dbi services is the leading Swiss IT expert for the handling of enterprise information systems based on Oracle, Microsoft, Middleware, and Open Source technologies. At dbi services, more than 60 engaged, passionate, and experienced associates share the same..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 28",
+        "email": "ceo@dbiservices.com"
+      },
+      "partnerContact": {
+        "name": "David Weber",
+        "role": "Alliance & Channel Manager",
+        "email": "david.weber@dbiservices.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 22
   },
   {
     "id": "OT-221",
     "name": "Flexso",
-    "tier": "Gold",
-    "motion": "1:Few Cohort",
     "region": "DACH,Central & Eastern Europe,Benelux,France,Iberia,Italy,Nordics",
     "country": "Austria",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Sarah Schmidt",
-      "role": "Alliance & Channel Manager",
-      "email": "sarah.schmidt@flexso.com"
+    "tier": "Gold",
+    "type": "Reseller",
+    "activationState": "Activated (1st Deal Reg)",
+    "dealsRegistered": 4,
+    "daysSinceSigned": 57,
+    "daysSinceLastDeal": 18,
+    "lastActiveUpdate": "Deal registered 7d ago",
+    "opportunities": 20,
+    "opportunityStages": {
+      "discovery": 4,
+      "solution": 5,
+      "proposal": 4,
+      "negotiation": 3,
+      "closedWon": 4
     },
-    "daysSinceSigned": 58,
-    "activationState": "At Risk of Dormancy",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": false,
-    "accountOverlapCount": 15,
-    "dealsRegistered": 0,
+    "closedWon": 4,
+    "winRate": 20.0,
+    "avgDealSize": 65000,
+    "verticals": [
+      "Automotive",
+      "Supply Chain",
+      "Healthcare"
+    ],
     "certifications": 7,
-    "recommendedPlay": "Push Overlapping Target Accounts + First-Deal SPIFF",
-    "overview": "Pioneers in digital, experts in business: Our passion? Implementing &amp; building smart SAP solutions that put your organization one step ahead and guarantee peace of mind. From a full SAP suite, additional apps and extensions to integrations and managed services: whatever..."
+    "implementationsDone": 8,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 29",
+        "email": "ceo@flexso.com"
+      },
+      "partnerContact": {
+        "name": "Sarah Schmidt",
+        "role": "Alliance & Channel Manager",
+        "email": "sarah.schmidt@flexso.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 22
   },
   {
     "id": "OT-345",
     "name": "kki FirstClass Deutschland eK",
-    "tier": "Bronze",
-    "motion": "1:Many Digital",
     "region": "DACH",
     "country": "Austria",
-    "partnerManager": "Sarah Jenkins",
-    "partnerContact": {
-      "name": "Thomas Weber",
-      "role": "Alliance & Channel Manager",
-      "email": "thomas.weber@kkifirstclassdeuts.com"
+    "tier": "Bronze",
+    "type": "System Integrator",
+    "activationState": "Newly Signed (0-30d)",
+    "dealsRegistered": 0,
+    "daysSinceSigned": 24,
+    "daysSinceLastDeal": null,
+    "lastActiveUpdate": "Portal login 9 days ago",
+    "opportunities": 3,
+    "opportunityStages": {
+      "discovery": 1,
+      "solution": 1,
+      "proposal": 1,
+      "negotiation": 0,
+      "closedWon": 0
     },
-    "daysSinceSigned": 19,
-    "activationState": "Activated (1st Deal Reg)",
-    "portalLoggedIn": true,
-    "salesKitDownloaded": true,
-    "accountOverlapCount": 9,
-    "dealsRegistered": 1,
+    "closedWon": 0,
+    "winRate": 0.0,
+    "avgDealSize": 280000,
+    "verticals": [
+      "Supply Chain",
+      "Manufacturing",
+      "Automotive"
+    ],
     "certifications": 11,
-    "recommendedPlay": "Unlock 50% Cert Voucher & Assign SE Pre-Sales Support",
-    "overview": "\"We are convinced that you can only achieve the best results with first-class tools. That principle should be the deciding factor when deciding whether to use a specific software or not. We have twenty years of experience in professional communication solutions and our..."
+    "implementationsDone": 0,
+    "contacts": {
+      "ceo": {
+        "name": "Executive 30",
+        "email": "ceo@kkifirstclassdeutschlandek.com"
+      },
+      "partnerContact": {
+        "name": "Thomas Weber",
+        "role": "Alliance & Channel Manager",
+        "email": "thomas.weber@kkifirstclassdeuts.com"
+      },
+      "partnerManager": {
+        "name": "Sarah Jenkins",
+        "email": "sjenkins@opentext.com"
+      }
+    },
+    "accountOverlapCount": 13
   }
 ]

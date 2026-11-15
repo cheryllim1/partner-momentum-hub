@@ -14,6 +14,7 @@ export const Route = createFileRoute("/rules")({
     { name: "description", content: "Demand Before Investment automation rules and first-deal incentive simulator." },
     { property: "og:title", content: "Deal-Triggered Certification & Incentive Rules" },
     { property: "og:description", content: "Unlock certification vouchers and SE support on first deal registration." },
+    { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" },
   ] }),
   component: Rules,
 });
