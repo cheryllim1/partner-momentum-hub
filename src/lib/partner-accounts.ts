@@ -4,6 +4,8 @@ export interface PartnerAccount {
   stage: string;
   status: string;
   primaryVertical: string;
+  products: { id: string; name: string; category: string; description: string }[];
+  productsSource: string;
 }
 
 export function separatePartnerAccounts(accounts: PartnerAccount[] | null) {

@@ -12,7 +12,7 @@ export function partnerEvidence() {
       avgDealSize: p.avgDealSize, certifications: p.certifications, implementationsDone: p.implementationsDone,
       openOpportunities: activity ? activity.opportunityStages.discovery + activity.opportunityStages.solution + activity.opportunityStages.proposal + activity.opportunityStages.negotiation : null,
       activity: activity ? { daysSinceLastActivity: activity.daysSinceLastActivity, lastUpdate: activity.lastActiveUpdate, status: activity.activationState, dealsRegistered: activity.dealsRegistered, opportunityStages: activity.opportunityStages } : null,
-      ...separatePartnerAccounts(p.accounts),
+      ...separatePartnerAccounts(p.accounts?.map((account) => ({ ...account, products: [], productsSource: "Simulated products excluded from AI evidence" })) ?? null),
     };
   });
 }

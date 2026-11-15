@@ -35,3 +35,4 @@ use the editor.
 - Centralize country-to-region assignments in the region library for pipeline, directory and matching; leave unspecified assignments unresolved rather than guessing.
 - Keep AI questions behind verified Lovable workspace identity in server functions, sending a contact-free uploaded evidence projection through AI Gateway; missing activity or customers remain unknown.
 - Classify uploaded partner accounts centrally by status before display or AI projection; active deployments and pipeline prospects must stay separate while missing uploads remain unknown.
+- Persist explicitly requested simulated account-product assignments in source data with provenance, rather than rerandomizing during rendering, to keep demos stable and distinguish simulations from uploaded evidence.

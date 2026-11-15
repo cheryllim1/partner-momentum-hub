@@ -1,0 +1,92 @@
+[
+  {
+    "id": "PROD-01",
+    "name": "OpenText Extended ECM (xECM)",
+    "category": "Content",
+    "description": "Enterprise content management integrated with SAP, Salesforce, and Microsoft."
+  },
+  {
+    "id": "PROD-02",
+    "name": "OpenText Documentum",
+    "category": "Content",
+    "description": "High-scale document management and compliance archiving for regulated industries."
+  },
+  {
+    "id": "PROD-03",
+    "name": "OpenText Content Aviator",
+    "category": "Content",
+    "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+  },
+  {
+    "id": "PROD-04",
+    "name": "OpenText Core Content",
+    "category": "Content",
+    "description": "SaaS-based multi-tenant cloud content management platform."
+  },
+  {
+    "id": "PROD-05",
+    "name": "OpenText Exstream",
+    "category": "Experience",
+    "description": "Customer communications management for personalized omnichannel billing and correspondence."
+  },
+  {
+    "id": "PROD-06",
+    "name": "OpenText Media Management (OTMM)",
+    "category": "Experience",
+    "description": "Enterprise digital asset management for global brand control."
+  },
+  {
+    "id": "PROD-07",
+    "name": "OpenText Experience Platform",
+    "category": "Experience",
+    "description": "Unified digital experience and web content management."
+  },
+  {
+    "id": "PROD-08",
+    "name": "OpenText Fortify",
+    "category": "Cybersecurity",
+    "description": "Application security, static/dynamic code analysis, and vulnerability assessment."
+  },
+  {
+    "id": "PROD-09",
+    "name": "OpenText NetIQ",
+    "category": "Cybersecurity",
+    "description": "Identity and access management, directory services, and security event monitoring."
+  },
+  {
+    "id": "PROD-10",
+    "name": "OpenText CarbonBlack / Endpoint",
+    "category": "Cybersecurity",
+    "description": "Endpoint detection, response, and threat hunting."
+  },
+  {
+    "id": "PROD-11",
+    "name": "OpenText Trading Grid",
+    "category": "Business Network",
+    "description": "B2B integration, EDI, and supply chain message exchange network."
+  },
+  {
+    "id": "PROD-12",
+    "name": "OpenText Active Intelligence",
+    "category": "Business Network",
+    "description": "B2B analytics and supply chain visibility dashboard."
+  },
+  {
+    "id": "PROD-13",
+    "name": "OpenText Service Management Automation X (SMAX)",
+    "category": "IT Operations",
+    "description": "AI-powered IT service management and asset discovery."
+  },
+  {
+    "id": "PROD-14",
+    "name": "OpenText Operations Bridge (OpsBridge)",
+    "category": "IT Operations",
+    "description": "IT infrastructure monitoring and event correlation."
+  },
+  {
+    "id": "PROD-15",
+    "name": "OpenText ALM Octane",
+    "category": "IT Operations",
+    "description": "Agile software delivery, test management, and application lifecycle governance."
+  }
+]

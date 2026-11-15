@@ -51,14 +51,56 @@
         "arr": 220000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-07",
+            "name": "OpenText Experience Platform",
+            "category": "Experience",
+            "description": "Unified digital experience and web content management."
+          },
+          {
+            "id": "PROD-11",
+            "name": "OpenText Trading Grid",
+            "category": "Business Network",
+            "description": "B2B integration, EDI, and supply chain message exchange network."
+          },
+          {
+            "id": "PROD-01",
+            "name": "OpenText Extended ECM (xECM)",
+            "category": "Content",
+            "description": "Enterprise content management integrated with SAP, Salesforce, and Microsoft."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Telstra",
         "arr": 350000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          },
+          {
+            "id": "PROD-06",
+            "name": "OpenText Media Management (OTMM)",
+            "category": "Experience",
+            "description": "Enterprise digital asset management for global brand control."
+          },
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -114,28 +156,70 @@
         "arr": 150000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          },
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Nestle",
         "arr": 75000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Danone",
         "arr": 220000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "SAP SE",
         "arr": 220000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -191,21 +275,78 @@
         "arr": 110000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          },
+          {
+            "id": "PROD-01",
+            "name": "OpenText Extended ECM (xECM)",
+            "category": "Content",
+            "description": "Enterprise content management integrated with SAP, Salesforce, and Microsoft."
+          },
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Sony Corporation",
         "arr": 220000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          },
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          },
+          {
+            "id": "PROD-11",
+            "name": "OpenText Trading Grid",
+            "category": "Business Network",
+            "description": "B2B integration, EDI, and supply chain message exchange network."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Vodafone Group",
         "arr": 45000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          },
+          {
+            "id": "PROD-13",
+            "name": "OpenText Service Management Automation X (SMAX)",
+            "category": "IT Operations",
+            "description": "AI-powered IT service management and asset discovery."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -261,28 +402,76 @@
         "arr": 75000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          },
+          {
+            "id": "PROD-05",
+            "name": "OpenText Exstream",
+            "category": "Experience",
+            "description": "Customer communications management for personalized omnichannel billing and correspondence."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Singtel",
         "arr": 45000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "BMW Group",
         "arr": 220000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "HSBC",
         "arr": 110000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          },
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -338,28 +527,94 @@
         "arr": 45000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-05",
+            "name": "OpenText Exstream",
+            "category": "Experience",
+            "description": "Customer communications management for personalized omnichannel billing and correspondence."
+          },
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          },
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "GlaxoSmithKline",
         "arr": 110000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          },
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Telef\u00f3nica",
         "arr": 150000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          },
+          {
+            "id": "PROD-06",
+            "name": "OpenText Media Management (OTMM)",
+            "category": "Experience",
+            "description": "Enterprise digital asset management for global brand control."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "BP",
         "arr": 45000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          },
+          {
+            "id": "PROD-13",
+            "name": "OpenText Service Management Automation X (SMAX)",
+            "category": "IT Operations",
+            "description": "AI-powered IT service management and asset discovery."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -415,14 +670,32 @@
         "arr": 220000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Sime Darby",
         "arr": 110000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-09",
+            "name": "OpenText NetIQ",
+            "category": "Cybersecurity",
+            "description": "Identity and access management, directory services, and security event monitoring."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -478,21 +751,66 @@
         "arr": 75000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          },
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          },
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Aviva",
         "arr": 110000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Samsung Electronics",
         "arr": 45000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          },
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -548,14 +866,38 @@
         "arr": 45000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          },
+          {
+            "id": "PROD-08",
+            "name": "OpenText Fortify",
+            "category": "Cybersecurity",
+            "description": "Application security, static/dynamic code analysis, and vulnerability assessment."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Ericsson",
         "arr": 45000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-11",
+            "name": "OpenText Trading Grid",
+            "category": "Business Network",
+            "description": "B2B integration, EDI, and supply chain message exchange network."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -611,21 +953,48 @@
         "arr": 45000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Grab Holdings",
         "arr": 350000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-01",
+            "name": "OpenText Extended ECM (xECM)",
+            "category": "Content",
+            "description": "Enterprise content management integrated with SAP, Salesforce, and Microsoft."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "BBVA",
         "arr": 75000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-01",
+            "name": "OpenText Extended ECM (xECM)",
+            "category": "Content",
+            "description": "Enterprise content management integrated with SAP, Salesforce, and Microsoft."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -681,28 +1050,94 @@
         "arr": 150000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-01",
+            "name": "OpenText Extended ECM (xECM)",
+            "category": "Content",
+            "description": "Enterprise content management integrated with SAP, Salesforce, and Microsoft."
+          },
+          {
+            "id": "PROD-13",
+            "name": "OpenText Service Management Automation X (SMAX)",
+            "category": "IT Operations",
+            "description": "AI-powered IT service management and asset discovery."
+          },
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Adidas",
         "arr": 350000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          },
+          {
+            "id": "PROD-09",
+            "name": "OpenText NetIQ",
+            "category": "Cybersecurity",
+            "description": "Identity and access management, directory services, and security event monitoring."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Foxconn",
         "arr": 110000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-09",
+            "name": "OpenText NetIQ",
+            "category": "Cybersecurity",
+            "description": "Identity and access management, directory services, and security event monitoring."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "SNCF",
         "arr": 350000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-09",
+            "name": "OpenText NetIQ",
+            "category": "Cybersecurity",
+            "description": "Identity and access management, directory services, and security event monitoring."
+          },
+          {
+            "id": "PROD-07",
+            "name": "OpenText Experience Platform",
+            "category": "Experience",
+            "description": "Unified digital experience and web content management."
+          },
+          {
+            "id": "PROD-13",
+            "name": "OpenText Service Management Automation X (SMAX)",
+            "category": "IT Operations",
+            "description": "AI-powered IT service management and asset discovery."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -758,28 +1193,100 @@
         "arr": 150000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          },
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Allianz",
         "arr": 75000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          },
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          },
+          {
+            "id": "PROD-01",
+            "name": "OpenText Extended ECM (xECM)",
+            "category": "Content",
+            "description": "Enterprise content management integrated with SAP, Salesforce, and Microsoft."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Audi",
         "arr": 45000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          },
+          {
+            "id": "PROD-11",
+            "name": "OpenText Trading Grid",
+            "category": "Business Network",
+            "description": "B2B integration, EDI, and supply chain message exchange network."
+          },
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Capgemini",
         "arr": 75000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          },
+          {
+            "id": "PROD-08",
+            "name": "OpenText Fortify",
+            "category": "Cybersecurity",
+            "description": "Application security, static/dynamic code analysis, and vulnerability assessment."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -835,28 +1342,82 @@
         "arr": 350000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          },
+          {
+            "id": "PROD-05",
+            "name": "OpenText Exstream",
+            "category": "Experience",
+            "description": "Customer communications management for personalized omnichannel billing and correspondence."
+          },
+          {
+            "id": "PROD-06",
+            "name": "OpenText Media Management (OTMM)",
+            "category": "Experience",
+            "description": "Enterprise digital asset management for global brand control."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Kering",
         "arr": 45000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Philips",
         "arr": 45000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          },
+          {
+            "id": "PROD-08",
+            "name": "OpenText Fortify",
+            "category": "Cybersecurity",
+            "description": "Application security, static/dynamic code analysis, and vulnerability assessment."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Bayer",
         "arr": 350000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-09",
+            "name": "OpenText NetIQ",
+            "category": "Cybersecurity",
+            "description": "Identity and access management, directory services, and security event monitoring."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -912,28 +1473,88 @@
         "arr": 75000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          },
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "DHL Group",
         "arr": 150000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-13",
+            "name": "OpenText Service Management Automation X (SMAX)",
+            "category": "IT Operations",
+            "description": "AI-powered IT service management and asset discovery."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Mercedes-Benz",
         "arr": 45000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Public Sector"
+        "primaryVertical": "Public Sector",
+        "products": [
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          },
+          {
+            "id": "PROD-06",
+            "name": "OpenText Media Management (OTMM)",
+            "category": "Experience",
+            "description": "Enterprise digital asset management for global brand control."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Caterpillar",
         "arr": 150000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          },
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          },
+          {
+            "id": "PROD-07",
+            "name": "OpenText Experience Platform",
+            "category": "Experience",
+            "description": "Unified digital experience and web content management."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -989,21 +1610,54 @@
         "arr": 150000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-13",
+            "name": "OpenText Service Management Automation X (SMAX)",
+            "category": "IT Operations",
+            "description": "AI-powered IT service management and asset discovery."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Nintendo",
         "arr": 350000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Legal & General",
         "arr": 150000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          },
+          {
+            "id": "PROD-06",
+            "name": "OpenText Media Management (OTMM)",
+            "category": "Experience",
+            "description": "Enterprise digital asset management for global brand control."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1059,14 +1713,50 @@
         "arr": 75000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-07",
+            "name": "OpenText Experience Platform",
+            "category": "Experience",
+            "description": "Unified digital experience and web content management."
+          },
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "TotalEnergies",
         "arr": 150000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-08",
+            "name": "OpenText Fortify",
+            "category": "Cybersecurity",
+            "description": "Application security, static/dynamic code analysis, and vulnerability assessment."
+          },
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          },
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1122,14 +1812,44 @@
         "arr": 110000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          },
+          {
+            "id": "PROD-07",
+            "name": "OpenText Experience Platform",
+            "category": "Experience",
+            "description": "Unified digital experience and web content management."
+          },
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Rolls-Royce",
         "arr": 45000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1185,14 +1905,50 @@
         "arr": 45000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          },
+          {
+            "id": "PROD-07",
+            "name": "OpenText Experience Platform",
+            "category": "Experience",
+            "description": "Unified digital experience and web content management."
+          },
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Boeing",
         "arr": 75000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          },
+          {
+            "id": "PROD-11",
+            "name": "OpenText Trading Grid",
+            "category": "Business Network",
+            "description": "B2B integration, EDI, and supply chain message exchange network."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1248,21 +2004,66 @@
         "arr": 150000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          },
+          {
+            "id": "PROD-01",
+            "name": "OpenText Extended ECM (xECM)",
+            "category": "Content",
+            "description": "Enterprise content management integrated with SAP, Salesforce, and Microsoft."
+          },
+          {
+            "id": "PROD-06",
+            "name": "OpenText Media Management (OTMM)",
+            "category": "Experience",
+            "description": "Enterprise digital asset management for global brand control."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Maybank",
         "arr": 45000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-09",
+            "name": "OpenText NetIQ",
+            "category": "Cybersecurity",
+            "description": "Identity and access management, directory services, and security event monitoring."
+          },
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Target Corp",
         "arr": 45000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-09",
+            "name": "OpenText NetIQ",
+            "category": "Cybersecurity",
+            "description": "Identity and access management, directory services, and security event monitoring."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1318,21 +2119,72 @@
         "arr": 110000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          },
+          {
+            "id": "PROD-09",
+            "name": "OpenText NetIQ",
+            "category": "Cybersecurity",
+            "description": "Identity and access management, directory services, and security event monitoring."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Verizon",
         "arr": 350000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-01",
+            "name": "OpenText Extended ECM (xECM)",
+            "category": "Content",
+            "description": "Enterprise content management integrated with SAP, Salesforce, and Microsoft."
+          },
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          },
+          {
+            "id": "PROD-08",
+            "name": "OpenText Fortify",
+            "category": "Cybersecurity",
+            "description": "Application security, static/dynamic code analysis, and vulnerability assessment."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "AstraZeneca",
         "arr": 75000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          },
+          {
+            "id": "PROD-11",
+            "name": "OpenText Trading Grid",
+            "category": "Business Network",
+            "description": "B2B integration, EDI, and supply chain message exchange network."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1388,14 +2240,38 @@
         "arr": 220000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-13",
+            "name": "OpenText Service Management Automation X (SMAX)",
+            "category": "IT Operations",
+            "description": "AI-powered IT service management and asset discovery."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Lockheed Martin",
         "arr": 110000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          },
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1451,28 +2327,88 @@
         "arr": 150000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "ANZ Bank",
         "arr": 220000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-08",
+            "name": "OpenText Fortify",
+            "category": "Cybersecurity",
+            "description": "Application security, static/dynamic code analysis, and vulnerability assessment."
+          },
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Generali",
         "arr": 45000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Public Sector"
+        "primaryVertical": "Public Sector",
+        "products": [
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          },
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          },
+          {
+            "id": "PROD-13",
+            "name": "OpenText Service Management Automation X (SMAX)",
+            "category": "IT Operations",
+            "description": "AI-powered IT service management and asset discovery."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Pfizer",
         "arr": 75000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          },
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1528,28 +2464,88 @@
         "arr": 75000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          },
+          {
+            "id": "PROD-05",
+            "name": "OpenText Exstream",
+            "category": "Experience",
+            "description": "Customer communications management for personalized omnichannel billing and correspondence."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Porsche",
         "arr": 45000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-05",
+            "name": "OpenText Exstream",
+            "category": "Experience",
+            "description": "Customer communications management for personalized omnichannel billing and correspondence."
+          },
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          },
+          {
+            "id": "PROD-13",
+            "name": "OpenText Service Management Automation X (SMAX)",
+            "category": "IT Operations",
+            "description": "AI-powered IT service management and asset discovery."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Hermes",
         "arr": 220000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Public Sector"
+        "primaryVertical": "Public Sector",
+        "products": [
+          {
+            "id": "PROD-08",
+            "name": "OpenText Fortify",
+            "category": "Cybersecurity",
+            "description": "Application security, static/dynamic code analysis, and vulnerability assessment."
+          },
+          {
+            "id": "PROD-01",
+            "name": "OpenText Extended ECM (xECM)",
+            "category": "Content",
+            "description": "Enterprise content management integrated with SAP, Salesforce, and Microsoft."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Ford Motor Company",
         "arr": 75000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-13",
+            "name": "OpenText Service Management Automation X (SMAX)",
+            "category": "IT Operations",
+            "description": "AI-powered IT service management and asset discovery."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1605,21 +2601,66 @@
         "arr": 150000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          },
+          {
+            "id": "PROD-09",
+            "name": "OpenText NetIQ",
+            "category": "Cybersecurity",
+            "description": "Identity and access management, directory services, and security event monitoring."
+          },
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Iberdrola",
         "arr": 350000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          },
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Rio Tinto",
         "arr": 110000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-01",
+            "name": "OpenText Extended ECM (xECM)",
+            "category": "Content",
+            "description": "Enterprise content management integrated with SAP, Salesforce, and Microsoft."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1675,21 +2716,60 @@
         "arr": 220000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Public Sector"
+        "primaryVertical": "Public Sector",
+        "products": [
+          {
+            "id": "PROD-09",
+            "name": "OpenText NetIQ",
+            "category": "Cybersecurity",
+            "description": "Identity and access management, directory services, and security event monitoring."
+          },
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Barclays",
         "arr": 220000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-06",
+            "name": "OpenText Media Management (OTMM)",
+            "category": "Experience",
+            "description": "Enterprise digital asset management for global brand control."
+          },
+          {
+            "id": "PROD-07",
+            "name": "OpenText Experience Platform",
+            "category": "Experience",
+            "description": "Unified digital experience and web content management."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Eni",
         "arr": 110000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1745,14 +2825,50 @@
         "arr": 75000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          },
+          {
+            "id": "PROD-13",
+            "name": "OpenText Service Management Automation X (SMAX)",
+            "category": "IT Operations",
+            "description": "AI-powered IT service management and asset discovery."
+          },
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "SoftBank",
         "arr": 75000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          },
+          {
+            "id": "PROD-06",
+            "name": "OpenText Media Management (OTMM)",
+            "category": "Experience",
+            "description": "Enterprise digital asset management for global brand control."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1808,28 +2924,94 @@
         "arr": 110000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          },
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Acer",
         "arr": 220000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          },
+          {
+            "id": "PROD-07",
+            "name": "OpenText Experience Platform",
+            "category": "Experience",
+            "description": "Unified digital experience and web content management."
+          },
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Petronas",
         "arr": 45000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-09",
+            "name": "OpenText NetIQ",
+            "category": "Cybersecurity",
+            "description": "Identity and access management, directory services, and security event monitoring."
+          },
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          },
+          {
+            "id": "PROD-05",
+            "name": "OpenText Exstream",
+            "category": "Experience",
+            "description": "Customer communications management for personalized omnichannel billing and correspondence."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "H&M",
         "arr": 45000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-05",
+            "name": "OpenText Exstream",
+            "category": "Experience",
+            "description": "Customer communications management for personalized omnichannel billing and correspondence."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1885,28 +3067,76 @@
         "arr": 75000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Intesa Sanpaolo",
         "arr": 220000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Public Sector"
+        "primaryVertical": "Public Sector",
+        "products": [
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          },
+          {
+            "id": "PROD-05",
+            "name": "OpenText Exstream",
+            "category": "Experience",
+            "description": "Customer communications management for personalized omnichannel billing and correspondence."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Equinix Europe",
         "arr": 110000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Public Sector"
+        "primaryVertical": "Public Sector",
+        "products": [
+          {
+            "id": "PROD-01",
+            "name": "OpenText Extended ECM (xECM)",
+            "category": "Content",
+            "description": "Enterprise content management integrated with SAP, Salesforce, and Microsoft."
+          },
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Santander UK",
         "arr": 350000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Public Sector"
+        "primaryVertical": "Public Sector",
+        "products": [
+          {
+            "id": "PROD-05",
+            "name": "OpenText Exstream",
+            "category": "Experience",
+            "description": "Customer communications management for personalized omnichannel billing and correspondence."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -1962,21 +3192,78 @@
         "arr": 110000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-07",
+            "name": "OpenText Experience Platform",
+            "category": "Experience",
+            "description": "Unified digital experience and web content management."
+          },
+          {
+            "id": "PROD-11",
+            "name": "OpenText Trading Grid",
+            "category": "Business Network",
+            "description": "B2B integration, EDI, and supply chain message exchange network."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "TSMC",
         "arr": 350000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          },
+          {
+            "id": "PROD-07",
+            "name": "OpenText Experience Platform",
+            "category": "Experience",
+            "description": "Unified digital experience and web content management."
+          },
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "L'Oreal",
         "arr": 45000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Financial Services"
+        "primaryVertical": "Financial Services",
+        "products": [
+          {
+            "id": "PROD-02",
+            "name": "OpenText Documentum",
+            "category": "Content",
+            "description": "High-scale document management and compliance archiving for regulated industries."
+          },
+          {
+            "id": "PROD-05",
+            "name": "OpenText Exstream",
+            "category": "Experience",
+            "description": "Customer communications management for personalized omnichannel billing and correspondence."
+          },
+          {
+            "id": "PROD-10",
+            "name": "OpenText CarbonBlack / Endpoint",
+            "category": "Cybersecurity",
+            "description": "Endpoint detection, response, and threat hunting."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -2032,14 +3319,44 @@
         "arr": 350000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          },
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Enel",
         "arr": 350000,
         "stage": "Technical Proof of Concept",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Healthcare"
+        "primaryVertical": "Healthcare",
+        "products": [
+          {
+            "id": "PROD-12",
+            "name": "OpenText Active Intelligence",
+            "category": "Business Network",
+            "description": "B2B analytics and supply chain visibility dashboard."
+          },
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   },
@@ -2095,28 +3412,88 @@
         "arr": 150000,
         "stage": "Closed Won",
         "status": "Active Deployment",
-        "primaryVertical": "Supply Chain"
+        "primaryVertical": "Supply Chain",
+        "products": [
+          {
+            "id": "PROD-13",
+            "name": "OpenText Service Management Automation X (SMAX)",
+            "category": "IT Operations",
+            "description": "AI-powered IT service management and asset discovery."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "General Electric",
         "arr": 45000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-05",
+            "name": "OpenText Exstream",
+            "category": "Experience",
+            "description": "Customer communications management for personalized omnichannel billing and correspondence."
+          },
+          {
+            "id": "PROD-14",
+            "name": "OpenText Operations Bridge (OpsBridge)",
+            "category": "IT Operations",
+            "description": "IT infrastructure monitoring and event correlation."
+          },
+          {
+            "id": "PROD-08",
+            "name": "OpenText Fortify",
+            "category": "Cybersecurity",
+            "description": "Application security, static/dynamic code analysis, and vulnerability assessment."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Spotify",
         "arr": 45000,
         "stage": "Negotiation",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Automotive"
+        "primaryVertical": "Automotive",
+        "products": [
+          {
+            "id": "PROD-04",
+            "name": "OpenText Core Content",
+            "category": "Content",
+            "description": "SaaS-based multi-tenant cloud content management platform."
+          }
+        ],
+        "productsSource": "Simulated"
       },
       {
         "accountName": "Nokia",
         "arr": 220000,
         "stage": "Solution & Architecture",
         "status": "Pipeline Co-Sell",
-        "primaryVertical": "Manufacturing"
+        "primaryVertical": "Manufacturing",
+        "products": [
+          {
+            "id": "PROD-03",
+            "name": "OpenText Content Aviator",
+            "category": "Content",
+            "description": "Generative AI-powered search and knowledge discovery for enterprise content."
+          },
+          {
+            "id": "PROD-15",
+            "name": "OpenText ALM Octane",
+            "category": "IT Operations",
+            "description": "Agile software delivery, test management, and application lifecycle governance."
+          },
+          {
+            "id": "PROD-05",
+            "name": "OpenText Exstream",
+            "category": "Experience",
+            "description": "Customer communications management for personalized omnichannel billing and correspondence."
+          }
+        ],
+        "productsSource": "Simulated"
       }
     ]
   }

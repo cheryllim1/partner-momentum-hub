@@ -58,7 +58,7 @@ export function PartnerDetail({ partner }: { partner: DirPartner }) {
           <Stat label="Partner Type" value={<span className="text-base">{partner.type}</span>} />
         </div>
         <div className="mt-4">
-          <p className="mb-2 text-xs font-semibold uppercase text-muted-foreground">Verticals / Product Focus</p>
+          <p className="mb-2 text-xs font-semibold uppercase text-muted-foreground">Industry / Product Focus</p>
           <div className="flex flex-wrap gap-2">{partner.verticals.map((v) => <span key={v} className="rounded-full border bg-background px-2.5 py-0.5 text-xs text-foreground">{v}</span>)}</div>
         </div>
       </div>
@@ -143,8 +143,8 @@ function AccountSection({ title, accounts }: { title: string; accounts: PartnerA
   return <section className="border-t py-5" aria-label={title}>
     <h2 className="text-base font-bold text-foreground">{title}{accounts !== null && <span className="ml-2 text-sm font-normal text-muted-foreground">{accounts.length}</span>}</h2>
     {accounts === null ? <p className="mt-2 text-sm text-muted-foreground">Account records have not been supplied for this partner.</p> : accounts.length === 0 ? <p className="mt-2 text-sm text-muted-foreground">None in the uploaded account records.</p> : <div className="mt-3 overflow-x-auto"><table className="w-full min-w-[600px] text-left text-sm">
-      <thead className="border-b text-xs text-muted-foreground"><tr>{["Account", "ARR", "Sales Stage", "Status", "Vertical"].map((label) => <th key={label} className="px-3 py-2 font-medium">{label}</th>)}</tr></thead>
-      <tbody className="divide-y">{accounts.map((account, index) => <tr key={`${account.accountName}-${index}`}><td className="px-3 py-3 font-semibold">{account.accountName}</td><td className="px-3 py-3 tabular-nums">{account.arr.toLocaleString("en-US")}</td><td className="px-3 py-3">{account.stage}</td><td className="px-3 py-3">{account.status}</td><td className="px-3 py-3">{account.primaryVertical}</td></tr>)}</tbody>
+      <thead className="border-b text-xs text-muted-foreground"><tr>{["Account", "ARR", "Sales Stage", "Status", "Industry", "Products (Simulated)"].map((label) => <th key={label} className="px-3 py-2 font-medium">{label}</th>)}</tr></thead>
+      <tbody className="divide-y">{accounts.map((account, index) => <tr key={`${account.accountName}-${index}`}><td className="px-3 py-3 font-semibold">{account.accountName}</td><td className="px-3 py-3 tabular-nums">{account.arr.toLocaleString("en-US")}</td><td className="px-3 py-3">{account.stage}</td><td className="px-3 py-3">{account.status}</td><td className="px-3 py-3">{account.primaryVertical}</td><td className="min-w-56 px-3 py-3"><ul className="space-y-1">{account.products.map((product) => <li key={product.id}>{product.name}</li>)}</ul></td></tr>)}</tbody>
     </table></div>}
   </section>;
 }
