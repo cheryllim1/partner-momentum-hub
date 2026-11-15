@@ -23,7 +23,7 @@ export const Route = createFileRoute("/enablement")({
 function Enablement() {
   const { p: pid } = Route.useSearch();
   const navigate = useNavigate({ from: "/enablement" });
-  const partner = PARTNERS.find((x) => x.id === pid) ?? PARTNERS[0];
+  const partner = PARTNERS.find((x) => x.id === pid) ?? PARTNERS[0]!;
   const [done, setDone] = useState<Record<string, Set<string>>>({});
   const d = done[partner.id] ?? seedDone(partner);
   const plan = PLANS[planKey(partner)];
