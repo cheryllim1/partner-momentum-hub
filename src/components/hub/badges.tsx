@@ -11,7 +11,8 @@ export function TierBadge({ tier }: { tier: Tier }) {
 }
 const stateCls: Record<ActivationState, string> = {
   "Activated (1st Deal Reg)": "bg-success/12 text-success border-success/30",
-  "At Risk of Dormancy": "bg-warning/15 text-warning-foreground border-warning/30",
+  "Disengaged": "bg-warning/15 text-warning-foreground border-warning/30",
+  "Not Yet Activated": "bg-muted text-muted-foreground border-border",
   "Dormant (90d+)": "bg-destructive/10 text-destructive border-destructive/25",
   "Newly Signed (0-30d)": "bg-accent text-accent-foreground border-primary/20",
 };

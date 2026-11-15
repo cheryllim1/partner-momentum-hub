@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DealsRouteImport } from './routes/deals'
 import { Route as EnablementRouteImport } from './routes/enablement'
-import { Route as RulesRouteImport } from './routes/rules'
 import { Route as PartnersPartnerIdRouteImport } from './routes/partners.$partnerId'
 
 const IndexRoute = IndexRouteImport.update({
@@ -30,11 +29,6 @@ const EnablementRoute = EnablementRouteImport.update({
   path: '/enablement',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RulesRoute = RulesRouteImport.update({
-  id: '/rules',
-  path: '/rules',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const PartnersPartnerIdRoute = PartnersPartnerIdRouteImport.update({
   id: '/partners/$partnerId',
   path: '/partners/$partnerId',
@@ -45,14 +39,12 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/deals': typeof DealsRoute
   '/enablement': typeof EnablementRoute
-  '/rules': typeof RulesRoute
   '/partners/$partnerId': typeof PartnersPartnerIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/deals': typeof DealsRoute
   '/enablement': typeof EnablementRoute
-  '/rules': typeof RulesRoute
   '/partners/$partnerId': typeof PartnersPartnerIdRoute
 }
 export interface FileRoutesById {
@@ -60,28 +52,20 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/deals': typeof DealsRoute
   '/enablement': typeof EnablementRoute
-  '/rules': typeof RulesRoute
   '/partners/$partnerId': typeof PartnersPartnerIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/deals' | '/enablement' | '/rules' | '/partners/$partnerId'
+  fullPaths: '/' | '/deals' | '/enablement' | '/partners/$partnerId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/deals' | '/enablement' | '/rules' | '/partners/$partnerId'
-  id:
-    | '__root__'
-    | '/'
-    | '/deals'
-    | '/enablement'
-    | '/rules'
-    | '/partners/$partnerId'
+  to: '/' | '/deals' | '/enablement' | '/partners/$partnerId'
+  id: '__root__' | '/' | '/deals' | '/enablement' | '/partners/$partnerId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DealsRoute: typeof DealsRoute
   EnablementRoute: typeof EnablementRoute
-  RulesRoute: typeof RulesRoute
   PartnersPartnerIdRoute: typeof PartnersPartnerIdRoute
 }
 
@@ -108,13 +92,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EnablementRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/rules': {
-      id: '/rules'
-      path: '/rules'
-      fullPath: '/rules'
-      preLoaderRoute: typeof RulesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/partners/$partnerId': {
       id: '/partners/$partnerId'
       path: '/partners/$partnerId'
@@ -129,7 +106,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DealsRoute: DealsRoute,
   EnablementRoute: EnablementRoute,
-  RulesRoute: RulesRoute,
   PartnersPartnerIdRoute: PartnersPartnerIdRoute,
 }
 export const routeTree = rootRouteImport

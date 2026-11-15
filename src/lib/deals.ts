@@ -14,5 +14,5 @@ export function matchesFor(d: Deal, ps: Partner[] = PARTNERS) {
     const hasAccount = overlapAccounts(p).includes(d.account);
     const score = (hasAccount ? 60 : 0) + (p.region === d.region ? 30 : 0) + Math.min(10, p.accountOverlapCount);
     return { partner: p, score, hasAccount, sameRegion: p.region === d.region };
-  }).filter((m) => m.score >= 30).sort((a, b) => b.score - a.score);
+  }).filter((m) => m.score >= 30).sort((a, b) => b.score - a.score).slice(0, 5);
 }

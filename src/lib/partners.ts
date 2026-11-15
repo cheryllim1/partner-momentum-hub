@@ -5,13 +5,13 @@ const masterById = new Map(master.map((r) => [r.id, r]));
 const masterByName = new Map(master.map((r) => [r.name.toLowerCase(), r]));
 export const cleanHtml = (s: string) => s.replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/<[^>]+>/g, "").trim();
 
-export type ActivationState = "At Risk of Dormancy" | "Dormant (90d+)" | "Activated (1st Deal Reg)" | "Newly Signed (0-30d)";
+export type ActivationState = "Disengaged" | "Dormant (90d+)" | "Activated (1st Deal Reg)" | "Newly Signed (0-30d)" | "Not Yet Activated";
 export type Tier = "Platinum" | "Gold" | "Silver" | "Bronze";
 export type PartnerContact = { name: string; email: string; role?: string };
 export interface Partner {
   id: string; name: string; tier: Tier; motion: string; region: string; country: string; type: string; partnerManager: string;
   daysSinceSigned: number; daysSinceLastDeal: number | null; lastActiveUpdate: string;
-  activationState: ActivationState; portalLoggedIn: boolean; salesKitDownloaded: boolean;
+   activationState: ActivationState; daysSinceLastActivity: number | null; portalLoggedIn: boolean; salesKitDownloaded: boolean;
   accountOverlapCount: number; dealsRegistered: number; certifications: number; recommendedPlay: string;
   opportunities: number; opportunityStages: { discovery: number; solution: number; proposal: number; negotiation: number; closedWon: number };
   closedWon: number; winRate: number; avgDealSize: number; verticals: string[]; implementationsDone: number;
@@ -19,11 +19,24 @@ export interface Partner {
   contact: PartnerContact; overview: string;
 }
 const cleanContact = (c: PartnerContact): PartnerContact => ({ ...c, email: c.email.replace(/'/g, "") });
+/** Read only explicit relative ages supplied in the uploaded activity description. */
+export function activityAge(update: string): number | null {
+  const match = update.match(/\b(\d+)\s*(?:d|days?)\s+ago\b/i);
+  return match?.[1] === undefined ? null : Number(match[1]);
+}
+export function activityState(days: number | null, deals: number, newlySigned: boolean): ActivationState {
+  if (days !== null && days >= 90) return "Dormant (90d+)";
+  if (days !== null && days >= 30) return "Disengaged";
+  if (deals > 0) return "Activated (1st Deal Reg)";
+  return newlySigned ? "Newly Signed (0-30d)" : "Not Yet Activated";
+}
 export const PARTNERS: Partner[] = momentum.map((m) => {
   const r = masterById.get(m.id) ?? masterByName.get(m.name.toLowerCase());
   const contacts = { ceo: cleanContact(m.contacts.ceo), partnerContact: cleanContact(m.contacts.partnerContact), partnerManager: cleanContact(m.contacts.partnerManager) };
   return {
-    ...m, tier: m.tier as Tier, activationState: m.activationState as ActivationState,
+     ...m, tier: m.tier as Tier,
+     daysSinceLastActivity: activityAge(m.lastActiveUpdate),
+     activationState: activityState(activityAge(m.lastActiveUpdate), m.dealsRegistered, m.activationState === "Newly Signed (0-30d)"),
     contacts, contact: contacts.partnerContact, partnerManager: contacts.partnerManager.name,
     motion: m.tier === "Platinum" ? "1:1" : m.tier === "Gold" ? "1:Few" : "1:Many",
     portalLoggedIn: false, salesKitDownloaded: false, recommendedPlay: "",
@@ -38,11 +51,12 @@ export function partnerTiming(p: Pick<Partner, "tier" | "daysSinceSigned" | "day
 
 export function computeKpis(ps: Partner[]) {
   const activated = ps.filter((p) => p.dealsRegistered > 0);
-  const risk = ps.filter((p) => p.dealsRegistered === 0 && (p.activationState === "At Risk of Dormancy" || p.activationState === "Dormant (90d+)"));
+  const risk = ps.filter((p) => p.activationState === "Disengaged" || p.activationState === "Dormant (90d+)");
   return {
     activationRate: ps.length ? (activated.length / ps.length) * 100 : 0,
     openOpportunities: ps.reduce((s, p) => s + p.opportunityStages.discovery + p.opportunityStages.solution + p.opportunityStages.proposal + p.opportunityStages.negotiation, 0),
     atRisk: risk.length,
+    dormant: ps.filter((p) => p.daysSinceLastActivity !== null && p.daysSinceLastActivity >= 90).length,
     untapped: risk.reduce((s, p) => s + p.accountOverlapCount, 0),
   };
 }

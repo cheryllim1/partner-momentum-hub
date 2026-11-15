@@ -61,6 +61,11 @@ export function PartnerDetail({ partner }: { partner: DirPartner }) {
         </div>
       </div>
 
+      <section className="border-y py-5" aria-label="Current customers">
+        <h2 className="text-base font-bold text-foreground">Current Customers</h2>
+        <p className="mt-1 text-sm text-muted-foreground">{partner.closedWon === 0 ? "No closed-won deals recorded. Current-customer records have not been supplied." : `${partner.closedWon} closed-won deals · Current-customer records have not been supplied.`}</p>
+      </section>
+
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="rounded-xl border bg-card p-5 shadow-card">
           <p className="mb-3 text-sm font-bold text-foreground">Partner Contacts</p>

@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
-    { title: "Activation & Dormancy Pipeline | Partner Activation and Enablement Dashboard" },
+    { title: "Partner Activation and Enablement Pipeline | Partner Activation and Enablement Dashboard" },
     { name: "description", content: "Track signed partners from onboarding to first deal registration and prevent dormancy." },
-    { property: "og:title", content: "Activation & Dormancy Pipeline" },
+    { property: "og:title", content: "Partner Activation and Enablement Pipeline" },
     { property: "og:description", content: "Track partner opportunities, sales stages and recent activity." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" },
   ] }),
@@ -20,23 +20,28 @@ export const Route = createFileRoute("/")({
 
 const STATES: { label: string; value: ActivationState | "All" }[] = [
   { label: "All", value: "All" }, { label: "Newly Signed", value: "Newly Signed (0-30d)" },
-  { label: "At Risk of Dormancy", value: "At Risk of Dormancy" }, { label: "Dormant 90d+", value: "Dormant (90d+)" },
+  { label: "Disengaged (30–89d)", value: "Disengaged" }, { label: "Dormant 90d+", value: "Dormant (90d+)" },
+  { label: "Not Yet Activated", value: "Not Yet Activated" },
   { label: "Activated", value: "Activated (1st Deal Reg)" },
 ];
 const TIERS: (Tier | "All")[] = ["All", "Platinum", "Gold", "Silver", "Bronze"];
+const optionsFor = (key: "region" | "country" | "type") => [...new Set(PARTNERS.map((p) => p[key]))].sort();
 
 function Pipeline() {
   const [sims] = usePersisted<string[]>("simulated-deals", []);
   const partners = useMemo(() => PARTNERS.map((p) => sims.includes(p.id) ? { ...p, dealsRegistered: Math.max(1, p.dealsRegistered), activationState: "Activated (1st Deal Reg)" as const, recommendedPlay: "Trigger 50% Certification Voucher on Deal #1" } : p), [sims]);
   const [state, setState] = useState<ActivationState | "All">("All");
   const [tier, setTier] = useState<Tier | "All">("All");
-  const k = computeKpis(partners);
-  const rows = useMemo(() => partners.filter((p) => (state === "All" || p.activationState === state) && (tier === "All" || p.tier === tier)), [partners, state, tier]);
+  const [region, setRegion] = useState("");
+  const [country, setCountry] = useState("");
+  const [type, setType] = useState("");
+  const rows = useMemo(() => partners.filter((p) => (state === "All" || p.activationState === state) && (tier === "All" || p.tier === tier) && (!region || p.region === region) && (!country || p.country === country) && (!type || p.type === type)), [partners, state, tier, region, country, type]);
+  const k = computeKpis(rows);
 
   const kpis = [
     { label: "Activation Rate (Signed → 1st Deal Reg)", value: `${k.activationRate.toFixed(1)}%`, icon: TrendingUp, tone: "text-success bg-success/10" },
     { label: "Open Opportunities", value: `${k.openOpportunities}`, icon: Building2, tone: "text-primary bg-primary/10" },
-    { label: "Partners At Risk / Dormant (0 Deals)", value: `${k.atRisk} Partners`, icon: AlertTriangle, tone: "text-warning-foreground bg-warning/15" },
+    { label: "Partners Inactive for 90+ Days", value: `${k.dormant} Partners`, icon: AlertTriangle, tone: "text-warning-foreground bg-warning/15" },
     { label: "Untapped Account Overlaps in Dormant Base", value: `${k.untapped} Warm Accounts`, icon: Target, tone: "text-destructive bg-destructive/10" },
   ];
 
@@ -44,9 +49,13 @@ function Pipeline() {
     <div className="space-y-6">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-foreground">Activation & Dormancy Pipeline</h1>
+          <h1 className="text-2xl font-bold text-foreground">Partner Activation and Enablement Pipeline</h1>
           <p className="text-sm text-muted-foreground">Convert signed, passive partners into their first deal registration.</p>
         </div>
+      </div>
+
+      <div className="flex flex-wrap gap-4 border-y py-4">
+        {[{ label: "Region", value: region, set: setRegion, options: optionsFor("region") }, { label: "Country", value: country, set: setCountry, options: optionsFor("country") }, { label: "Partner tier", value: tier === "All" ? "" : tier, set: (v: string) => setTier((v || "All") as Tier | "All"), options: TIERS.filter((v) => v !== "All") }, { label: "Partner type", value: type, set: setType, options: optionsFor("type") }].map((f) => <label key={f.label} className="min-w-40 flex-1 text-xs font-semibold text-muted-foreground">{f.label}<select aria-label={f.label} value={f.value} onChange={(e) => f.set(e.target.value)} className="mt-2 w-full rounded-md border bg-background px-3 py-2 text-sm text-foreground"><option value="">All</option>{f.options.map((v) => <option key={v}>{v}</option>)}</select></label>)}
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -61,19 +70,20 @@ function Pipeline() {
 
       <div className="flex flex-wrap gap-6 rounded-xl border bg-card p-4 shadow-card">
         <FilterGroup label="Activation State" options={STATES.map((s) => ({ label: s.label, value: s.value }))} value={state} onChange={(v) => setState(v as never)} />
-        <FilterGroup label="Tier" options={TIERS.map((t) => ({ label: t, value: t }))} value={tier} onChange={(v) => setTier(v as never)} />
+        <span className="self-center text-xs text-muted-foreground">{rows.length} partners</span>
       </div>
 
       <div className="overflow-x-auto rounded-xl border bg-card shadow-card">
         <table className="w-full text-sm">
           <thead className="border-b bg-muted/50 text-left text-xs uppercase tracking-wide text-muted-foreground">
-            <tr>{["Partner", "Region", "Partner Type", "Tier", "Deals", "Opportunities & Stages", "Activity & Timing", "Status", ""].map((h, i) => <th key={i} className="px-4 py-3">{h}</th>)}</tr>
+            <tr>{["Partner", "Region", "Country", "Partner Type", "Tier", "Deals", "Opportunities & Stages", "Activity & Timing", "Status", ""].map((h, i) => <th key={i} className="px-4 py-3">{h}</th>)}</tr>
           </thead>
           <tbody className="divide-y">
             {rows.map((p) => (
               <tr key={p.id} className="hover:bg-muted/30">
                 <td className="px-4 py-3"><Link to="/partners/$partnerId" params={{ partnerId: p.id }} className="font-semibold text-primary hover:underline">{p.name}</Link></td>
                 <td className="px-4 py-3 text-muted-foreground">{p.region}</td>
+                <td className="px-4 py-3 text-muted-foreground">{p.country}</td>
                 <td className="px-4 py-3 text-muted-foreground">{p.type}</td>
                 <td className="px-4 py-3"><TierBadge tier={p.tier} /></td>
                 <td className="px-4 py-3 text-center font-bold">{p.dealsRegistered}</td>
@@ -89,7 +99,7 @@ function Pipeline() {
                 <td className="px-4 py-3"><Button size="sm" variant="outline" asChild><Link to="/partners/$partnerId" params={{ partnerId: p.id }}>View Profile</Link></Button></td>
               </tr>
             ))}
-            {rows.length === 0 && <tr><td colSpan={9} className="px-4 py-10 text-center text-muted-foreground">No partners match these filters.</td></tr>}
+            {rows.length === 0 && <tr><td colSpan={10} className="px-4 py-10 text-center text-muted-foreground">No partners match these filters.</td></tr>}
           </tbody>
         </table>
       </div>

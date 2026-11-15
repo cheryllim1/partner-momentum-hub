@@ -56,7 +56,7 @@ function Enablement() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead className="bg-muted/50 text-left text-xs uppercase text-muted-foreground">
-              <tr>{["Partner", "Tier", "Type", "Region", "Opps", "Closed Won", "Win Rate", "Avg Deal"].map((h) => <th key={h} className="px-4 py-2 font-semibold">{h}</th>)}</tr>
+              <tr>{["Partner", "Tier", "Type", "Region", "Country", "Opps", "Closed Won", "Win Rate", "Avg Deal"].map((h) => <th key={h} className="px-4 py-2 font-semibold">{h}</th>)}</tr>
             </thead>
             <tbody>
               {rows.slice((page - 1) * PAGE, page * PAGE).map((p) => (
@@ -65,13 +65,14 @@ function Enablement() {
                   <td className="px-4 py-2"><TierBadge tier={p.tier} /></td>
                   <td className="px-4 py-2 text-muted-foreground">{p.type}</td>
                   <td className="px-4 py-2 text-muted-foreground">{p.region}</td>
+                  <td className="px-4 py-2 text-muted-foreground">{p.country}</td>
                   <td className="px-4 py-2">{p.opportunities}</td>
                   <td className="px-4 py-2">{p.closedWon}</td>
                   <td className="px-4 py-2">{p.winRate}%</td>
                   <td className="px-4 py-2">{money(p.avgDealSize)}</td>
                 </tr>
               ))}
-              {rows.length === 0 && <tr><td colSpan={8} className="px-4 py-8 text-center text-muted-foreground">No partners match these filters.</td></tr>}
+              {rows.length === 0 && <tr><td colSpan={9} className="px-4 py-8 text-center text-muted-foreground">No partners match these filters.</td></tr>}
             </tbody>
           </table>
         </div>
