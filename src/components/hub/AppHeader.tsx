@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Rocket } from "lucide-react";
+import { Rocket, RotateCcw } from "lucide-react";
+import { resetDemo } from "@/lib/demo-store";
 
 const tabs = [
   { to: "/", label: "Activation & Dormancy Pipeline" },
@@ -17,6 +18,7 @@ export function AppHeader() {
           <div>
             <p className="text-base font-bold leading-tight text-foreground">Partner Activation and Enablement Dashboard</p>
           </div>
+          <button onClick={resetDemo} className="ml-auto inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground hover:bg-muted hover:text-foreground"><RotateCcw className="h-3.5 w-3.5" />Reset Demo</button>
         </div>
         <nav className="-mb-px flex gap-6 overflow-x-auto">
           {tabs.map((t) => (

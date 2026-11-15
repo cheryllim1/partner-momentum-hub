@@ -5,6 +5,7 @@ import { Switch } from "@/components/ui/switch";
 import { Slider } from "@/components/ui/slider";
 import { incentivesFor, type Tier } from "@/lib/partners";
 import { TierBadge } from "@/components/hub/badges";
+import { usePersisted } from "@/lib/demo-store";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/rules")({
@@ -25,7 +26,7 @@ const RULES = [
 const TIERS: Tier[] = ["Bronze", "Silver", "Gold", "Platinum"];
 
 function Rules() {
-  const [on, setOn] = useState<Record<number, boolean>>({ 1: true, 2: true, 3: true });
+  const [on, setOn] = usePersisted<Record<number, boolean>>("rules", { 1: true, 2: true, 3: true });
   const [tierIdx, setTierIdx] = useState(2);
   const [deal, setDeal] = useState(40000);
   const tier = TIERS[tierIdx] ?? "Gold";

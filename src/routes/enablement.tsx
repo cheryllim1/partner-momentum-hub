@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { Check, Send, Search, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
+import { usePersisted } from "@/lib/demo-store";
 import { PILLARS, readiness } from "@/lib/enablement";
 import { DIRECTORY, REGIONS, TYPES, TIERS, filterPartners, planFor, seedDoneDir, defaultOverrides, incentivesWithOverrides, type DirPartner, type Overrides } from "@/lib/directory";
 import { TierBadge } from "@/components/hub/badges";
@@ -101,19 +102,18 @@ function Contact({ role, name, email }: { role: string; name?: string | null; em
   return (
     <div className="rounded-lg border bg-background p-3">
       <p className="text-xs font-semibold uppercase text-muted-foreground">{role}</p>
-      <p className="mt-1 text-sm font-medium text-foreground">{name ?? "Not on file"}</p>
-      {email ? <a href={`mailto:${email}`} className="flex items-center gap-1 text-xs text-primary hover:underline"><Mail className="h-3 w-3" />{email}</a> : <p className="text-xs text-muted-foreground">No email on file</p>}
+      <p className="mt-1 text-sm font-medium text-foreground">{name}</p>
+      {email && <a href={`mailto:${email}`} className="flex items-center gap-1 text-xs text-primary hover:underline"><Mail className="h-3 w-3" />{email}</a>}
     </div>
   );
 }
 
-const overrideStore = new Map<string, Overrides>();
 
 function Detail({ partner }: { partner: DirPartner }) {
   const plan = planFor(partner.tier);
   const [done, setDone] = useState(() => seedDoneDir(partner));
-  const [o, setO] = useState<Overrides>(() => overrideStore.get(partner.id) ?? defaultOverrides(partner.tier));
-  const upd = (patch: Partial<Overrides>) => setO((x) => { const n = { ...x, ...patch }; overrideStore.set(partner.id, n); return n; });
+  const [o, setO] = usePersisted<Overrides>(`overrides:${partner.id}`, defaultOverrides(partner.tier));
+  const upd = (patch: Partial<Overrides>) => setO((x) => ({ ...x, ...patch }));
   const doneCount = plan.items.filter((i) => done.has(i.id)).length;
   const score = readiness(plan.items.length, doneCount);
   const unlocks = incentivesWithOverrides(o, partner.avgDealSize);
@@ -135,7 +135,6 @@ function Detail({ partner }: { partner: DirPartner }) {
           <Stat label="Closed Won" value={partner.closedWon} />
           <Stat label="Avg Win Rate" value={`${partner.winRate}%`} />
           <Stat label="Certifications Done" value={partner.certifications} />
-          <Stat label="Implementations Done" value={<span className="text-sm font-medium text-muted-foreground">Not in data yet</span>} />
           <Stat label="Partner Tier" value={partner.tier} />
           <Stat label="Partner Type" value={<span className="text-base">{partner.type}</span>} />
         </div>
@@ -149,9 +148,8 @@ function Detail({ partner }: { partner: DirPartner }) {
         <div className="rounded-xl border bg-card p-5 shadow-card">
           <p className="mb-3 text-sm font-bold text-foreground">Partner Contacts</p>
           <div className="grid gap-3 sm:grid-cols-2">
-            <Contact role="CEO" />
             <Contact role={partner.contact.role} name={partner.contact.name} email={partner.contact.email} />
-            <Contact role="Our Partner Manager" name={partner.partnerManager ?? "Unassigned (automated)"} />
+            {partner.partnerManager && <Contact role="Our Partner Manager" name={partner.partnerManager} />}
           </div>
         </div>
 

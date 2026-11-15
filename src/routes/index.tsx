@@ -1,12 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
-import { Check, X, Building2, Mail, MessageSquare, Zap, TrendingUp, Clock, AlertTriangle, Target, RotateCcw } from "lucide-react";
+import { Check, X, Building2, Mail, MessageSquare, Zap, TrendingUp, Clock, AlertTriangle, Target, } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { PARTNERS, computeKpis, overlapAccounts, playLabel, type Partner, type ActivationState, type Tier } from "@/lib/partners";
 import { TierBadge, StateBadge } from "@/components/hub/badges";
+import { usePersisted } from "@/lib/demo-store";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({
@@ -27,7 +28,8 @@ const STATES: { label: string; value: ActivationState | "All" }[] = [
 const TIERS: (Tier | "All")[] = ["All", "Platinum", "Gold", "Silver", "Bronze"];
 
 function Pipeline() {
-  const [partners, setPartners] = useState<Partner[]>(PARTNERS);
+  const [sims, setSims] = usePersisted<string[]>("simulated-deals", []);
+  const partners = useMemo(() => PARTNERS.map((p) => sims.includes(p.id) ? { ...p, dealsRegistered: Math.max(1, p.dealsRegistered), activationState: "Activated (1st Deal Reg)" as const, recommendedPlay: "Trigger 50% Certification Voucher on Deal #1" } : p), [sims]);
   const [state, setState] = useState<ActivationState | "All">("All");
   const [tier, setTier] = useState<Tier | "All">("All");
   const [active, setActive] = useState<Partner | null>(null);
@@ -35,7 +37,7 @@ function Pipeline() {
   const rows = useMemo(() => partners.filter((p) => (state === "All" || p.activationState === state) && (tier === "All" || p.tier === tier)), [partners, state, tier]);
 
   const simulate = (id: string) => {
-    setPartners((ps) => ps.map((p) => p.id === id ? { ...p, dealsRegistered: 1, activationState: "Activated (1st Deal Reg)", recommendedPlay: "Trigger 50% Certification Voucher on Deal #1" } : p));
+    setSims((s) => s.includes(id) ? s : [...s, id]);
     const p = partners.find((x) => x.id === id);
     toast.success(`${p?.name} registered their 1st deal`, { description: "50% certification voucher unlocked + Solutions Engineer assigned." });
     setActive(null);
@@ -55,7 +57,6 @@ function Pipeline() {
           <h1 className="text-2xl font-bold tracking-tight text-foreground">Activation & Dormancy Pipeline</h1>
           <p className="text-sm text-muted-foreground">Convert signed, passive partners into their first deal registration.</p>
         </div>
-        <Button variant="outline" size="sm" onClick={() => setPartners(PARTNERS)}><RotateCcw className="mr-1 h-4 w-4" />Reset demo</Button>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -81,7 +82,7 @@ function Pipeline() {
           <tbody className="divide-y">
             {rows.map((p) => (
               <tr key={p.id} className="hover:bg-muted/30">
-                <td className="px-4 py-3"><p className="font-semibold text-foreground">{p.name}</p><p className="text-xs text-muted-foreground">{p.id} · {p.motion} · {p.region} · {p.partnerManager}</p></td>
+                <td className="px-4 py-3"><p className="font-semibold text-foreground">{p.name}</p><p className="text-xs text-muted-foreground">{p.id} · {p.motion} · {p.region || "Region not set"}</p>{p.contact && <p className="text-xs text-muted-foreground">{p.contact.role}: {p.contact.name} · <a className="text-primary hover:underline" href={`mailto:${p.contact.email}`}>{p.contact.email}</a></p>}<p className="text-xs text-muted-foreground">Partner Manager: {p.partnerManager}</p></td>
                 <td className="px-4 py-3"><TierBadge tier={p.tier} /></td>
                 <td className="px-4 py-3 font-medium">{p.daysSinceSigned}d</td>
                 <td className="px-4 py-3"><div className="flex flex-wrap gap-1.5">

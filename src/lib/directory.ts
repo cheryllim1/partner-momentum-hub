@@ -22,7 +22,7 @@ export const DIRECTORY: DirPartner[] = (raw as Raw[]).map((r) => {
     verticals: Array.from(new Set(r.productFocus.split(",").map((v) => v.trim().replace(" and ", " & ")).filter(Boolean))),
     certifications: r.certifications, opportunities: r.opportunities, closedWon: r.closedWon,
     winRate: r.winRate, avgDealSize: r.avgDealSize, contact: r.partnerContact, overview: clean(r.overview ?? ""),
-    partnerManager: m && m.partnerManager !== "Automated Ops" ? m.partnerManager : null,
+    partnerManager: m?.partnerManager ?? null,
     activationState: m?.activationState ?? null,
   };
 });
