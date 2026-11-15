@@ -4,9 +4,9 @@ describe("kpis", () => {
   it("match spec", () => {
     const k = computeKpis(PARTNERS);
     expect(k.activationRate.toFixed(1)).toBe("36.7");
-    expect(k.avgDays).toBe(76);
-    expect(k.atRisk).toBe(18);
-    expect(k.untapped).toBe(158);
+    expect(k.avgDays).toBe(62);
+    expect(k.atRisk).toBe(19);
+    expect(k.untapped).toBe(136);
   });
   it("first deal unlocks 50% voucher only when rule 3 on", () => {
     expect(incentivesFor("Bronze", 10000, true)).toContain("50% Technical Certification Voucher");
@@ -23,4 +23,7 @@ describe("momentum merge", () => {
       expect(DIRECTORY.some((d) => d.id === p.id)).toBe(true);
     }
   });
+});
+describe("named partner managers", () => {
+  it("no partner is left on Automated Ops", () => expect(PARTNERS.filter((p) => p.partnerManager === "Automated Ops")).toEqual([]));
 });

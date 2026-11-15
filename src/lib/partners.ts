@@ -16,9 +16,9 @@ export interface Partner {
 export const PARTNERS: Partner[] = momentum.map((m) => {
   const r = masterById.get(m.id) ?? masterByName.get(m.name.toLowerCase());
   return {
-    ...(m as Omit<Partner, "contact" | "overview">),
+    ...(m as unknown as Omit<Partner, "contact" | "overview">),
     tier: m.tier as Tier, activationState: m.activationState as ActivationState,
-    contact: r?.partnerContact ?? null, overview: r ? cleanHtml(r.overview ?? "") : "",
+    contact: m.partnerContact ?? r?.partnerContact ?? null, overview: cleanHtml(m.overview || r?.overview || ""),
   };
 });
 

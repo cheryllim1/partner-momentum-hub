@@ -21,7 +21,7 @@ export const DIRECTORY: DirPartner[] = (raw as Raw[]).map((r) => {
     tier: r.tier as Tier, type: r.type, segmentFocus: r.segmentFocus,
     verticals: Array.from(new Set(r.productFocus.split(",").map((v) => v.trim().replace(" and ", " & ")).filter(Boolean))),
     certifications: r.certifications, opportunities: r.opportunities, closedWon: r.closedWon,
-    winRate: r.winRate, avgDealSize: r.avgDealSize, contact: r.partnerContact, overview: clean(r.overview ?? ""),
+    winRate: r.winRate, avgDealSize: r.avgDealSize, contact: m?.partnerContact ?? r.partnerContact, overview: clean(r.overview ?? ""),
     partnerManager: m?.partnerManager ?? null,
     activationState: m?.activationState ?? null,
   };
