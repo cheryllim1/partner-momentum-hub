@@ -83,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Partner Activation Hub" },
+      { title: "Partner Activation and Enablement Dashboard" },
       { name: "description", content: "Drive signed partners to their first deal registration." },
       { name: "author", content: "Lovable" },
       

@@ -10,7 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as PlaybooksRouteImport } from './routes/playbooks'
+import { Route as DealsRouteImport } from './routes/deals'
+import { Route as EnablementRouteImport } from './routes/enablement'
 import { Route as RulesRouteImport } from './routes/rules'
 
 const IndexRoute = IndexRouteImport.update({
@@ -18,9 +19,14 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PlaybooksRoute = PlaybooksRouteImport.update({
-  id: '/playbooks',
-  path: '/playbooks',
+const DealsRoute = DealsRouteImport.update({
+  id: '/deals',
+  path: '/deals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnablementRoute = EnablementRouteImport.update({
+  id: '/enablement',
+  path: '/enablement',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RulesRoute = RulesRouteImport.update({
@@ -31,31 +37,35 @@ const RulesRoute = RulesRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/playbooks': typeof PlaybooksRoute
+  '/deals': typeof DealsRoute
+  '/enablement': typeof EnablementRoute
   '/rules': typeof RulesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/playbooks': typeof PlaybooksRoute
+  '/deals': typeof DealsRoute
+  '/enablement': typeof EnablementRoute
   '/rules': typeof RulesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/playbooks': typeof PlaybooksRoute
+  '/deals': typeof DealsRoute
+  '/enablement': typeof EnablementRoute
   '/rules': typeof RulesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/playbooks' | '/rules'
+  fullPaths: '/' | '/deals' | '/enablement' | '/rules'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/playbooks' | '/rules'
-  id: '__root__' | '/' | '/playbooks' | '/rules'
+  to: '/' | '/deals' | '/enablement' | '/rules'
+  id: '__root__' | '/' | '/deals' | '/enablement' | '/rules'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  PlaybooksRoute: typeof PlaybooksRoute
+  DealsRoute: typeof DealsRoute
+  EnablementRoute: typeof EnablementRoute
   RulesRoute: typeof RulesRoute
 }
 
@@ -68,11 +78,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/playbooks': {
-      id: '/playbooks'
-      path: '/playbooks'
-      fullPath: '/playbooks'
-      preLoaderRoute: typeof PlaybooksRouteImport
+    '/deals': {
+      id: '/deals'
+      path: '/deals'
+      fullPath: '/deals'
+      preLoaderRoute: typeof DealsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/enablement': {
+      id: '/enablement'
+      path: '/enablement'
+      fullPath: '/enablement'
+      preLoaderRoute: typeof EnablementRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/rules': {
@@ -87,7 +104,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  PlaybooksRoute: PlaybooksRoute,
+  DealsRoute: DealsRoute,
+  EnablementRoute: EnablementRoute,
   RulesRoute: RulesRoute,
 }
 export const routeTree = rootRouteImport

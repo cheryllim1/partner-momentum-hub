@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/rules")({
   head: () => ({ meta: [
-    { title: "Deal-Triggered Certification & Incentive Rules | Partner Activation Hub" },
+    { title: "Deal-Triggered Certification & Incentive Rules | Partner Activation and Enablement Dashboard" },
     { name: "description", content: "Demand Before Investment automation rules and first-deal incentive simulator." },
     { property: "og:title", content: "Deal-Triggered Certification & Incentive Rules" },
     { property: "og:description", content: "Unlock certification vouchers and SE support on first deal registration." },

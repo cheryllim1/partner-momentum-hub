@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
 import { Check, X, Building2, Mail, MessageSquare, Zap, TrendingUp, Clock, AlertTriangle, Target, RotateCcw } from "lucide-react";
@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
-    { title: "Activation & Dormancy Pipeline | Partner Activation Hub" },
+    { title: "Activation & Dormancy Pipeline | Partner Activation and Enablement Dashboard" },
     { name: "description", content: "Track signed partners from onboarding to first deal registration and prevent dormancy." },
     { property: "og:title", content: "Activation & Dormancy Pipeline" },
     { property: "og:description", content: "Track signed partners from onboarding to first deal registration." },
@@ -94,6 +94,7 @@ function Pipeline() {
                   {p.dealsRegistered === 0 ? (
                     <Button size="sm" onClick={() => setActive(p)}><Zap className="mr-1 h-3.5 w-3.5" />{playLabel(p)}</Button>
                   ) : <span className="text-xs text-muted-foreground">{p.recommendedPlay}</span>}
+                  <Link to="/enablement" search={{ p: p.id }} className="mt-1 block text-xs font-medium text-primary hover:underline">Inspect Enablement →</Link>
                 </td>
               </tr>
             ))}
