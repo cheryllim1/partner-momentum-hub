@@ -3,6 +3,7 @@ import { PARTNERS, type PartnerContact } from "./partners";
 import type { Tier } from "./partners";
 import { PLANS, type PlanItem } from "./enablement";
 import { REGION_OPTIONS, regionForCountry } from "./regions";
+import type { PartnerAccount } from "./partner-accounts";
 
 export interface DirPartner {
   id: string; name: string; country: string; region: string; tier: Tier; type: string;
@@ -12,6 +13,7 @@ export interface DirPartner {
   contacts: { ceo: PartnerContact; partnerContact: PartnerContact; partnerManager: PartnerContact } | undefined;
   implementationsDone: number | null; partnerManagerEmail: string | null;
   partnerManager: string | null; activationState: string | null;
+  accounts: PartnerAccount[] | null;
 }
 type Raw = (typeof raw)[number];
 const mom = new Map(PARTNERS.map((m) => [m.id, m]));
@@ -28,6 +30,7 @@ export const DIRECTORY: DirPartner[] = (raw as Raw[]).map((r) => {
     contacts: m?.contacts, implementationsDone: m?.implementationsDone ?? null, partnerManagerEmail: m?.contacts.partnerManager.email ?? null, overview: clean(r.overview ?? ""),
     partnerManager: m?.partnerManager ?? null,
     activationState: m?.activationState ?? null,
+    accounts: m?.currentCustomers ?? null,
   };
 });
 

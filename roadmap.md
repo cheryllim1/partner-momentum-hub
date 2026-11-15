@@ -7,7 +7,8 @@
 - [x] Replace risk KPI and statuses with inactivity-based dormant/disengaged rules using any recorded activity
 - [x] Emphasize deal details, cap recommendations at five, and add demo-only Ping AE on Slack with message preview
 - [x] Remove standalone rules page, preserving individual partner incentives
-- [ ] Populate current-customer section — awaiting distinct customer records linked to partner IDs; customer counts are independent of won deals
+- [x] Import account records for 30 partners and separate active customers from pipeline co-sell prospects in profiles and AI evidence
+- [ ] Populate accounts for remaining 574 partners — awaiting uploaded account records
 - [x] Import corrected partner momentum upload and simplify pipeline with opportunities, stages and tier-specific timing
 - [x] Dedicated partner profiles with uploaded contacts and performance, enablement and incentive overrides
 - [ ] Deal page changes — waiting for user's deal dataset

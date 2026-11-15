@@ -1,6 +1,7 @@
 import momentum from "@/data/ot-momentum.json";
 import master from "@/data/ot-partners.json";
 import { regionForCountry } from "./regions";
+import type { PartnerAccount } from "./partner-accounts";
 
 const masterById = new Map(master.map((r) => [r.id, r]));
 const masterByName = new Map(master.map((r) => [r.name.toLowerCase(), r]));
@@ -18,6 +19,7 @@ export interface Partner {
   closedWon: number; winRate: number; avgDealSize: number; verticals: string[]; implementationsDone: number;
   contacts: { ceo: PartnerContact; partnerContact: PartnerContact; partnerManager: PartnerContact };
   contact: PartnerContact; overview: string;
+  currentCustomers: PartnerAccount[];
 }
 const cleanContact = (c: PartnerContact): PartnerContact => ({ ...c, email: c.email.replace(/'/g, "") });
 /** Read only explicit relative ages supplied in the uploaded activity description. */

@@ -8,6 +8,7 @@ import { PILLARS, readiness } from "@/lib/enablement";
 import { planFor, seedDoneDir, defaultOverrides, incentivesWithOverrides, type DirPartner, type Overrides } from "@/lib/directory";
 import { TierBadge } from "@/components/hub/badges";
 import { cn } from "@/lib/utils";
+import { separatePartnerAccounts, type PartnerAccount } from "@/lib/partner-accounts";
 const money = (n: number) => `$${n.toLocaleString("en-US")}`;
 const sel = "rounded-md border bg-background px-3 py-2 text-sm text-foreground";
 function Stat({ label, value }: { label: string; value: React.ReactNode }) {
@@ -26,6 +27,7 @@ function Contact({ role, name, email }: { role: string; name?: string | null; em
 
 
 export function PartnerDetail({ partner }: { partner: DirPartner }) {
+  const accounts = separatePartnerAccounts(partner.accounts);
   const plan = planFor(partner.tier);
   const [done, setDone] = useState(() => seedDoneDir(partner));
   const [o, setO] = usePersisted<Overrides>(`overrides:${partner.id}`, defaultOverrides(partner.tier));
@@ -61,10 +63,8 @@ export function PartnerDetail({ partner }: { partner: DirPartner }) {
         </div>
       </div>
 
-      <section className="border-y py-5" aria-label="Current customers">
-        <h2 className="text-base font-bold text-foreground">Current Customers</h2>
-        <p className="mt-1 text-sm text-muted-foreground">{partner.closedWon === 0 ? "No closed-won deals recorded. Current-customer records have not been supplied." : `${partner.closedWon} closed-won deals · Current-customer records have not been supplied.`}</p>
-      </section>
+      <AccountSection title="Current Customers" accounts={accounts.currentCustomers} />
+      <AccountSection title="Pipeline Co-Sell Accounts" accounts={accounts.pipelineAccounts} />
 
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="rounded-xl border bg-card p-5 shadow-card">
@@ -137,4 +137,14 @@ export function PartnerDetail({ partner }: { partner: DirPartner }) {
       </div>
     </div>
   );
+}
+
+function AccountSection({ title, accounts }: { title: string; accounts: PartnerAccount[] | null }) {
+  return <section className="border-t py-5" aria-label={title}>
+    <h2 className="text-base font-bold text-foreground">{title}{accounts !== null && <span className="ml-2 text-sm font-normal text-muted-foreground">{accounts.length}</span>}</h2>
+    {accounts === null ? <p className="mt-2 text-sm text-muted-foreground">Account records have not been supplied for this partner.</p> : accounts.length === 0 ? <p className="mt-2 text-sm text-muted-foreground">None in the uploaded account records.</p> : <div className="mt-3 overflow-x-auto"><table className="w-full min-w-[600px] text-left text-sm">
+      <thead className="border-b text-xs text-muted-foreground"><tr>{["Account", "ARR", "Sales Stage", "Status", "Vertical"].map((label) => <th key={label} className="px-3 py-2 font-medium">{label}</th>)}</tr></thead>
+      <tbody className="divide-y">{accounts.map((account, index) => <tr key={`${account.accountName}-${index}`}><td className="px-3 py-3 font-semibold">{account.accountName}</td><td className="px-3 py-3 tabular-nums">{account.arr.toLocaleString("en-US")}</td><td className="px-3 py-3">{account.stage}</td><td className="px-3 py-3">{account.status}</td><td className="px-3 py-3">{account.primaryVertical}</td></tr>)}</tbody>
+    </table></div>}
+  </section>;
 }

@@ -44,7 +44,23 @@
         "email": "dchen@opentext.com"
       }
     },
-    "accountOverlapCount": 17
+    "accountOverlapCount": 17,
+    "currentCustomers": [
+      {
+        "accountName": "Vinci",
+        "arr": 220000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Supply Chain"
+      },
+      {
+        "accountName": "Telstra",
+        "arr": 350000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      }
+    ]
   },
   {
     "id": "OT-026",
@@ -91,7 +107,37 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 12
+    "accountOverlapCount": 12,
+    "currentCustomers": [
+      {
+        "accountName": "DBS Bank",
+        "arr": 150000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "Nestle",
+        "arr": 75000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "Danone",
+        "arr": 220000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "SAP SE",
+        "arr": 220000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      }
+    ]
   },
   {
     "id": "OT-282",
@@ -138,7 +184,30 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 16
+    "accountOverlapCount": 16,
+    "currentCustomers": [
+      {
+        "accountName": "Siemens AG",
+        "arr": 110000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Supply Chain"
+      },
+      {
+        "accountName": "Sony Corporation",
+        "arr": 220000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Supply Chain"
+      },
+      {
+        "accountName": "Vodafone Group",
+        "arr": 45000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Supply Chain"
+      }
+    ]
   },
   {
     "id": "OT-251",
@@ -185,7 +254,37 @@
         "email": "cmendez@opentext.com"
       }
     },
-    "accountOverlapCount": 17
+    "accountOverlapCount": 17,
+    "currentCustomers": [
+      {
+        "accountName": "Commonwealth Bank",
+        "arr": 75000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "Singtel",
+        "arr": 45000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Automotive"
+      },
+      {
+        "accountName": "BMW Group",
+        "arr": 220000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "HSBC",
+        "arr": 110000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Healthcare"
+      }
+    ]
   },
   {
     "id": "OT-229",
@@ -232,7 +331,37 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 15
+    "accountOverlapCount": 15,
+    "currentCustomers": [
+      {
+        "accountName": "LG Electronics",
+        "arr": 45000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "GlaxoSmithKline",
+        "arr": 110000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Supply Chain"
+      },
+      {
+        "accountName": "Telef\u00f3nica",
+        "arr": 150000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Supply Chain"
+      },
+      {
+        "accountName": "BP",
+        "arr": 45000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      }
+    ]
   },
   {
     "id": "OT-143",
@@ -279,7 +408,23 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 19
+    "accountOverlapCount": 19,
+    "currentCustomers": [
+      {
+        "accountName": "Volkswagen AG",
+        "arr": 220000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "Sime Darby",
+        "arr": 110000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Automotive"
+      }
+    ]
   },
   {
     "id": "OT-105",
@@ -326,7 +471,30 @@
         "email": "dchen@opentext.com"
       }
     },
-    "accountOverlapCount": 16
+    "accountOverlapCount": 16,
+    "currentCustomers": [
+      {
+        "accountName": "IKEA Group",
+        "arr": 75000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Financial Services"
+      },
+      {
+        "accountName": "Aviva",
+        "arr": 110000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Supply Chain"
+      },
+      {
+        "accountName": "Samsung Electronics",
+        "arr": 45000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      }
+    ]
   },
   {
     "id": "OT-559",
@@ -373,7 +541,23 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 10
+    "accountOverlapCount": 10,
+    "currentCustomers": [
+      {
+        "accountName": "Unilever",
+        "arr": 45000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "Ericsson",
+        "arr": 45000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Healthcare"
+      }
+    ]
   },
   {
     "id": "OT-090",
@@ -420,7 +604,30 @@
         "email": "dchen@opentext.com"
       }
     },
-    "accountOverlapCount": 22
+    "accountOverlapCount": 22,
+    "currentCustomers": [
+      {
+        "accountName": "Dassault Syst\u00e8mes",
+        "arr": 45000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Financial Services"
+      },
+      {
+        "accountName": "Grab Holdings",
+        "arr": 350000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Supply Chain"
+      },
+      {
+        "accountName": "BBVA",
+        "arr": 75000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Supply Chain"
+      }
+    ]
   },
   {
     "id": "OT-433",
@@ -467,7 +674,37 @@
         "email": "mlindqvist@opentext.com"
       }
     },
-    "accountOverlapCount": 14
+    "accountOverlapCount": 14,
+    "currentCustomers": [
+      {
+        "accountName": "Carrefour",
+        "arr": 150000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "Adidas",
+        "arr": 350000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "Foxconn",
+        "arr": 110000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "SNCF",
+        "arr": 350000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Supply Chain"
+      }
+    ]
   },
   {
     "id": "OT-033",
@@ -514,7 +751,37 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 21
+    "accountOverlapCount": 21,
+    "currentCustomers": [
+      {
+        "accountName": "BAE Systems",
+        "arr": 150000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Automotive"
+      },
+      {
+        "accountName": "Allianz",
+        "arr": 75000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "Audi",
+        "arr": 45000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "Capgemini",
+        "arr": 75000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Automotive"
+      }
+    ]
   },
   {
     "id": "OT-031",
@@ -561,7 +828,37 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 8
+    "accountOverlapCount": 8,
+    "currentCustomers": [
+      {
+        "accountName": "Shell",
+        "arr": 350000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "Kering",
+        "arr": 45000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "Philips",
+        "arr": 45000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "Bayer",
+        "arr": 350000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      }
+    ]
   },
   {
     "id": "OT-096",
@@ -608,7 +905,37 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 7
+    "accountOverlapCount": 7,
+    "currentCustomers": [
+      {
+        "accountName": "Bank of America",
+        "arr": 75000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "DHL Group",
+        "arr": 150000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "Mercedes-Benz",
+        "arr": 45000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Public Sector"
+      },
+      {
+        "accountName": "Caterpillar",
+        "arr": 150000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Automotive"
+      }
+    ]
   },
   {
     "id": "OT-224",
@@ -655,7 +982,30 @@
         "email": "dchen@opentext.com"
       }
     },
-    "accountOverlapCount": 22
+    "accountOverlapCount": 22,
+    "currentCustomers": [
+      {
+        "accountName": "ASUS",
+        "arr": 150000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Financial Services"
+      },
+      {
+        "accountName": "Nintendo",
+        "arr": 350000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Automotive"
+      },
+      {
+        "accountName": "Legal & General",
+        "arr": 150000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Automotive"
+      }
+    ]
   },
   {
     "id": "OT-239",
@@ -702,7 +1052,23 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 12
+    "accountOverlapCount": 12,
+    "currentCustomers": [
+      {
+        "accountName": "Schneider Electric",
+        "arr": 75000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "TotalEnergies",
+        "arr": 150000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Financial Services"
+      }
+    ]
   },
   {
     "id": "OT-518",
@@ -749,7 +1115,23 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 12
+    "accountOverlapCount": 12,
+    "currentCustomers": [
+      {
+        "accountName": "Stellantis",
+        "arr": 110000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "Rolls-Royce",
+        "arr": 45000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      }
+    ]
   },
   {
     "id": "OT-028",
@@ -796,7 +1178,23 @@
         "email": "econti@opentext.com"
       }
     },
-    "accountOverlapCount": 22
+    "accountOverlapCount": 22,
+    "currentCustomers": [
+      {
+        "accountName": "Airbus Defence",
+        "arr": 45000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Automotive"
+      },
+      {
+        "accountName": "Boeing",
+        "arr": 75000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Supply Chain"
+      }
+    ]
   },
   {
     "id": "OT-575",
@@ -843,7 +1241,30 @@
         "email": "cmoreau@opentext.com"
       }
     },
-    "accountOverlapCount": 8
+    "accountOverlapCount": 8,
+    "currentCustomers": [
+      {
+        "accountName": "Puma",
+        "arr": 150000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Financial Services"
+      },
+      {
+        "accountName": "Maybank",
+        "arr": 45000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Financial Services"
+      },
+      {
+        "accountName": "Target Corp",
+        "arr": 45000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Financial Services"
+      }
+    ]
   },
   {
     "id": "OT-204",
@@ -890,7 +1311,30 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 17
+    "accountOverlapCount": 17,
+    "currentCustomers": [
+      {
+        "accountName": "BHP Group",
+        "arr": 110000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "Verizon",
+        "arr": 350000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Financial Services"
+      },
+      {
+        "accountName": "AstraZeneca",
+        "arr": 75000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Financial Services"
+      }
+    ]
   },
   {
     "id": "OT-430",
@@ -937,7 +1381,23 @@
         "email": "econti@opentext.com"
       }
     },
-    "accountOverlapCount": 18
+    "accountOverlapCount": 18,
+    "currentCustomers": [
+      {
+        "accountName": "Deutsche Telekom",
+        "arr": 220000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Financial Services"
+      },
+      {
+        "accountName": "Lockheed Martin",
+        "arr": 110000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Automotive"
+      }
+    ]
   },
   {
     "id": "OT-226",
@@ -984,7 +1444,37 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 22
+    "accountOverlapCount": 22,
+    "currentCustomers": [
+      {
+        "accountName": "Reckitt",
+        "arr": 150000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "ANZ Bank",
+        "arr": 220000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "Generali",
+        "arr": 45000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Public Sector"
+      },
+      {
+        "accountName": "Pfizer",
+        "arr": 75000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      }
+    ]
   },
   {
     "id": "OT-460",
@@ -1031,7 +1521,37 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 17
+    "accountOverlapCount": 17,
+    "currentCustomers": [
+      {
+        "accountName": "Hyundai Motor",
+        "arr": 75000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Automotive"
+      },
+      {
+        "accountName": "Porsche",
+        "arr": 45000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Automotive"
+      },
+      {
+        "accountName": "Hermes",
+        "arr": 220000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Public Sector"
+      },
+      {
+        "accountName": "Ford Motor Company",
+        "arr": 75000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Financial Services"
+      }
+    ]
   },
   {
     "id": "OT-604",
@@ -1078,7 +1598,30 @@
         "email": "dchen@opentext.com"
       }
     },
-    "accountOverlapCount": 14
+    "accountOverlapCount": 14,
+    "currentCustomers": [
+      {
+        "accountName": "Volvo Cars",
+        "arr": 150000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "Iberdrola",
+        "arr": 350000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Financial Services"
+      },
+      {
+        "accountName": "Rio Tinto",
+        "arr": 110000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Supply Chain"
+      }
+    ]
   },
   {
     "id": "OT-285",
@@ -1125,7 +1668,30 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 6
+    "accountOverlapCount": 6,
+    "currentCustomers": [
+      {
+        "accountName": "Inditex",
+        "arr": 220000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Public Sector"
+      },
+      {
+        "accountName": "Barclays",
+        "arr": 220000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "Eni",
+        "arr": 110000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Supply Chain"
+      }
+    ]
   },
   {
     "id": "OT-007",
@@ -1172,7 +1738,23 @@
         "email": "dchen@opentext.com"
       }
     },
-    "accountOverlapCount": 24
+    "accountOverlapCount": 24,
+    "currentCustomers": [
+      {
+        "accountName": "Chevron",
+        "arr": 75000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "SoftBank",
+        "arr": 75000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Automotive"
+      }
+    ]
   },
   {
     "id": "OT-164",
@@ -1219,7 +1801,37 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 18
+    "accountOverlapCount": 18,
+    "currentCustomers": [
+      {
+        "accountName": "Orange SA",
+        "arr": 110000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "Acer",
+        "arr": 220000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "Petronas",
+        "arr": 45000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      },
+      {
+        "accountName": "H&M",
+        "arr": 45000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Manufacturing"
+      }
+    ]
   },
   {
     "id": "OT-349",
@@ -1266,7 +1878,37 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 9
+    "accountOverlapCount": 9,
+    "currentCustomers": [
+      {
+        "accountName": "ASML",
+        "arr": 75000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Supply Chain"
+      },
+      {
+        "accountName": "Intesa Sanpaolo",
+        "arr": 220000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Public Sector"
+      },
+      {
+        "accountName": "Equinix Europe",
+        "arr": 110000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Public Sector"
+      },
+      {
+        "accountName": "Santander UK",
+        "arr": 350000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Public Sector"
+      }
+    ]
   },
   {
     "id": "OT-160",
@@ -1313,7 +1955,30 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 22
+    "accountOverlapCount": 22,
+    "currentCustomers": [
+      {
+        "accountName": "Lloyds Banking Group",
+        "arr": 110000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Manufacturing"
+      },
+      {
+        "accountName": "TSMC",
+        "arr": 350000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Financial Services"
+      },
+      {
+        "accountName": "L'Oreal",
+        "arr": 45000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Financial Services"
+      }
+    ]
   },
   {
     "id": "OT-221",
@@ -1360,7 +2025,23 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 22
+    "accountOverlapCount": 22,
+    "currentCustomers": [
+      {
+        "accountName": "Toyota Motor",
+        "arr": 350000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Automotive"
+      },
+      {
+        "accountName": "Enel",
+        "arr": 350000,
+        "stage": "Technical Proof of Concept",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Healthcare"
+      }
+    ]
   },
   {
     "id": "OT-345",
@@ -1407,6 +2088,36 @@
         "email": "sjenkins@opentext.com"
       }
     },
-    "accountOverlapCount": 13
+    "accountOverlapCount": 13,
+    "currentCustomers": [
+      {
+        "accountName": "Equinor",
+        "arr": 150000,
+        "stage": "Closed Won",
+        "status": "Active Deployment",
+        "primaryVertical": "Supply Chain"
+      },
+      {
+        "accountName": "General Electric",
+        "arr": 45000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Automotive"
+      },
+      {
+        "accountName": "Spotify",
+        "arr": 45000,
+        "stage": "Negotiation",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Automotive"
+      },
+      {
+        "accountName": "Nokia",
+        "arr": 220000,
+        "stage": "Solution & Architecture",
+        "status": "Pipeline Co-Sell",
+        "primaryVertical": "Manufacturing"
+      }
+    ]
   }
 ]
