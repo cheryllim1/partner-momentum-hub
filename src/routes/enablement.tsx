@@ -9,7 +9,7 @@ import { TierBadge, StateBadge } from "@/components/hub/badges";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/enablement")({
-  validateSearch: (s: Record<string, unknown>): { p?: string } => (typeof s.p === "string" ? { p: s.p } : {}),
+  validateSearch: (s: Record<string, unknown>): { p?: string } => (typeof s["p"] === "string" ? { p: s["p"] } : {}),
   head: () => ({ meta: [
     { title: "Partner Enablement Tracker | Partner Activation and Enablement Dashboard" },
     { name: "description", content: "See which tier enablement activities each partner has and hasn't completed, and push the next resource." },
