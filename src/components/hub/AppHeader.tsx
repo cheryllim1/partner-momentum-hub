@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Rocket, RotateCcw } from "lucide-react";
 import { resetDemo } from "@/lib/demo-store";
 import { Button } from "@/components/ui/button";
+import { PartnerInsights } from "./PartnerInsights";
 
 const tabs = [
   { to: "/", label: "Partner Activation and Enablement Pipeline" },
@@ -18,7 +19,7 @@ export function AppHeader() {
           <div>
             <p className="text-base font-bold leading-tight text-foreground">Partner Activation and Enablement Dashboard</p>
           </div>
-          <Button variant="ghost" size="sm" onClick={resetDemo} className="ml-auto shrink-0 text-xs text-muted-foreground"><RotateCcw className="h-3.5 w-3.5" />Reset Demo</Button>
+          <div className="ml-auto flex shrink-0 flex-wrap gap-2"><PartnerInsights /><Button variant="ghost" size="sm" onClick={resetDemo} className="text-xs text-muted-foreground"><RotateCcw className="h-3.5 w-3.5" />Reset Demo</Button></div>
         </div>
         <nav className="-mb-px flex gap-6 overflow-x-auto">
           {tabs.map((t) => (

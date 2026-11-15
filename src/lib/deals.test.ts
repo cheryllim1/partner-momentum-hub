@@ -6,7 +6,7 @@ describe("deal recommendations", () => {
   it("never recommends more than five partners", () => {
     const deal = DEALS[0];
     if (!deal) throw new Error("Missing deal");
-    const candidates = PARTNERS.map((p) => ({ ...p, dealsRegistered: 0, region: deal.region }));
+    const candidates = PARTNERS.map((p) => ({ ...p, dealsRegistered: 0, region: "EMEA N" }));
     expect(matchesFor(deal, candidates)).toHaveLength(5);
   });
 });

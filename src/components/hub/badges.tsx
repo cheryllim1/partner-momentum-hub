@@ -16,6 +16,6 @@ const stateCls: Record<ActivationState, string> = {
   "Dormant (90d+)": "bg-destructive/10 text-destructive border-destructive/25",
   "Newly Signed (0-30d)": "bg-accent text-accent-foreground border-primary/20",
 };
-export function StateBadge({ state }: { state: ActivationState }) {
-  return <span className={cn("inline-flex whitespace-nowrap rounded-full border px-2 py-0.5 text-xs font-semibold", stateCls[state])}>{state}</span>;
+export function StateBadge({ state, compact = false }: { state: ActivationState; compact?: boolean }) {
+  return <span className={cn("inline-flex rounded-full border px-2 py-0.5 text-xs font-semibold", compact ? "max-w-full whitespace-normal" : "whitespace-nowrap", stateCls[state])}>{state}</span>;
 }

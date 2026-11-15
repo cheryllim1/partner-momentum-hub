@@ -75,7 +75,7 @@ function Pipeline() {
       </div>
 
       <div className="overflow-x-auto rounded-xl border bg-card shadow-card">
-        <table className="w-full table-fixed text-xs">
+        <table className="w-full min-w-[1100px] table-fixed text-xs">
           <colgroup>{["16%", "6%", "8%", "8%", "7%", "4%", "18%", "14%", "10%", "9%"].map((width, i) => <col key={i} style={{ width }} />)}</colgroup>
           <thead className="border-b bg-muted/50 text-left text-xs uppercase tracking-wide text-muted-foreground">
             <tr>{["Partner", "Region", "Country", "Partner Type", "Tier", "Deals", "Opportunities & Stages", "Activity & Timing", "Status", ""].map((h, i) => <th key={i} className="px-2 py-3 break-words">{h}</th>)}</tr>
@@ -97,7 +97,7 @@ function Pipeline() {
                   {partnerTiming(p) && <p className="font-medium text-foreground">{partnerTiming(p)}</p>}
                   <p className="mt-1 text-muted-foreground">{p.lastActiveUpdate}</p>
                 </td>
-                <td className="px-2 py-3 break-words"><StateBadge state={p.activationState} /></td>
+                <td className="px-2 py-3 break-words"><StateBadge state={p.activationState} compact /></td>
                 <td className="px-2 py-3 break-words"><Button size="sm" variant="outline" className="h-auto whitespace-normal px-2 py-1 text-xs" asChild><Link to="/partners/$partnerId" params={{ partnerId: p.id }}>View Profile</Link></Button></td>
               </tr>
             ))}

@@ -1,7 +1,7 @@
 # Roadmap
-- [ ] Add in-app AI questions and evidence-based partner priorities through AI Gateway; verify workspace model eligibility
-- [ ] Tighten pipeline geography columns and verify fit
-- [ ] Replace recommended-partner enablement links with editable joint co-selling email drafts
+- [ ] Verify signed-in AI answer end-to-end — feature implemented with permitted zero-retention model; local browser has no Lovable identity
+- [x] Tighten pipeline geography columns and verify fit
+- [x] Replace recommended-partner enablement links with editable joint co-selling email drafts
 - [ ] Group partners into seven country-based regions; await assignments for countries outside the supplied EMEA lists
 - [x] Rename pipeline, add country columns and region/country/tier/type filters that update KPI rates
 - [x] Replace risk KPI and statuses with inactivity-based dormant/disengaged rules using any recorded activity
