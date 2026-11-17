@@ -25,25 +25,10 @@ Tab 3: Deal-Triggered Certification & Incentive Rules
   - Rule 3: Partner Submits 1st Deal Registration → Automatically unlock 50% Technical Certification Voucher + Assign Solutions Engineer for Deal Support.
 - Include toggle switches to enable/disable rules and a live simulator slider ("Partner Tier" + "Deal Size") showing the exact incentives unlocked upon First Deal Registration.
 
-This project was built with [Lovable](https://lovable.dev).
+
 
 **Live app**: https://partner-momentum-hub.lovable.app
 
-## Build with Lovable
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/33b491b0-c416-4cf7-8fb2-463393d5afb9).
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
 ```
