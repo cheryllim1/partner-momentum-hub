@@ -4,7 +4,7 @@ Access Demo: [Partner Momentum Hub](https://partner-momentum-hub.lovable.app)
 
 ---
 ### The Business Challenge
-Signing a partner agreement is only the starting line—in most B2B ecosystems, **90% of signed partners remain passive**:
+Signing a partner agreement is only the starting line. In most B2B ecosystems, **90% of signed partners remain passive**:
 - **Post-Signing Drop-Off:** Partners sign contracts with good intentions, then stall due to a lack of structured onboarding, clear next steps, or technical readiness.
 - **Blind Spots Across Regions:** Without granular tracking across all 7 global regions (`NA`, `LATAM`, `EMEA N`, `EMEA S`, `DACH`, `GCN`, `APAC`), Partner Managers cannot tell which partners are genuinely progressing versus quietly churning. Ensuring partners are getting the right support and resources. 
 - **Unmeasured Enablement:** Teams send generic training decks without tracking whether enablement milestones actually convert passive partners into active, deal-registering sellers. 
