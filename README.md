@@ -15,7 +15,7 @@ The Partner Momentum Hub is an operational tracking tool built to manage the end
 ### Key Capabilities
 - **Activation & Readiness Tracking:** Monitors partner progression from initial onboarding through enablement completion to active co-selling, flagging stalled partners before they go dormant.
 - **7-Region Coverage & Stakeholder Mapping:** Tracks regional capacity and key cross-functional contacts across `NA`, `LATAM`, `EMEA N`, `EMEA S`, `DACH`, `GCN`, and `APAC`.
-- **Tiered Enablement Execution:** Operationalizes targeted enablement motions (`1:1`, `1:Few`, `1:Many`) and tracks asset utilization against actual deal registration velocity.
+- **Tiered Enablement Execution:** Operationalizes targeted enablement motions according to tiers and tracks asset utilization against actual deal registration velocity.
 ---
 
 ### The Boring Stuff (Data Engineering & Tech Stack)
